@@ -1,0 +1,28 @@
+.home-header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 42px 0 100px;
+}
+.header-img
+{
+    margin-right: 360px;
+}
+.header-list
+{
+    display: flex;
+    gap: 0 75px;
+    font-size: 16px;
+    color: var(--GrayscaleBlack50);
+}
+.header-btn
+{
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--GrayscaleWhite);
+    background-color: var(--PrimaryBlue100);
+    padding: 14px 23px;
+    width: 142px;
+    height: 50px;
+}

@@ -117,9 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"src/img/logo.svg":[function(require,module,exports) {
-module.exports = "/logo.cabda74f.svg";
-},{}],"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+})({"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 function getBundleURLCached() {
   if (!bundleURL) {
@@ -170,75 +168,11 @@ function reloadCSS() {
   }, 50);
 }
 module.exports = reloadCSS;
-},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"src/components/home/homeHeader/homeHeader.css":[function(require,module,exports) {
+},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"src/css/normalize.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/home/homeHeader/homeHeader.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.getHomeHeader = getHomeHeader;
-var _logo = _interopRequireDefault(require("../../../img/logo.svg"));
-require("./homeHeader.css");
-function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
-var headerArray = ["Home", "About Us", "Services", "Our Teams"];
-function getHomeHeader() {
-  var homeHeader = document.createElement("div");
-  homeHeader.className = "home-header";
-  var homeHeaderImg = document.createElement("img");
-  homeHeaderImg.className = "header-img";
-  homeHeaderImg.src = _logo.default;
-  homeHeaderImg.alt = "Dananz";
-  var homeHeaderList = document.createElement("ul");
-  homeHeaderList.className = "header-list";
-  headerArray.forEach(function (item) {
-    var items = document.createElement("li");
-    items.className = "header-items";
-    var link = document.createElement("a");
-    link.className = "header-link";
-    link.href = "#";
-    homeHeaderList.appendChild(items);
-    items.appendChild(link);
-    link.innerHTML = item;
-  });
-  var homeHeaderButton = document.createElement("button");
-  homeHeaderButton.className = "header-btn";
-  homeHeaderButton.textContent = "Contact Us";
-  homeHeader.append(homeHeaderImg, homeHeaderList, homeHeaderButton);
-  return homeHeader;
-}
-},{"../../../img/logo.svg":"src/img/logo.svg","./homeHeader.css":"src/components/home/homeHeader/homeHeader.css"}],"src/page/pageHeader/pageHeader.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/page/pageHeader/pageHeader.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.getPageHeader = getPageHeader;
-var _homeHeader = require("../../components/home/homeHeader/homeHeader");
-require("./pageHeader.css");
-function getPageHeader() {
-  var header = document.createElement("header");
-  header.className = "header";
-  var container = document.createElement("div");
-  container.className = "container";
-  header.append(container);
-  container.append((0, _homeHeader.getHomeHeader)());
-  return header;
-}
-},{"../../components/home/homeHeader/homeHeader":"src/components/home/homeHeader/homeHeader.js","./pageHeader.css":"src/page/pageHeader/pageHeader.css"}],"index.js":[function(require,module,exports) {
-"use strict";
-
-var _pageHeader = require("./src/page/pageHeader/pageHeader.js");
-var app = document.querySelector("#app");
-app.append((0, _pageHeader.getPageHeader)());
-},{"./src/page/pageHeader/pageHeader.js":"src/page/pageHeader/pageHeader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -407,5 +341,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
-//# sourceMappingURL=/Dananz.e31bb0bc.js.map
+},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
+//# sourceMappingURL=/normalize.d1cf9e2f.js.map
