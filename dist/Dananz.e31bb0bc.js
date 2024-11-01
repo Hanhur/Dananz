@@ -279,7 +279,38 @@ function getHomeMain() {
   container.append(designBlock, (0, _rating.getRating)());
   return section;
 }
-},{"../../rating/rating":"src/components/rating/rating.js","../../../img/main-bg.png":"src/img/main-bg.png","./homeMain.css":"src/components/home/homeMain/homeMain.css"}],"src/page/pageMain/pageMain.css":[function(require,module,exports) {
+},{"../../rating/rating":"src/components/rating/rating.js","../../../img/main-bg.png":"src/img/main-bg.png","./homeMain.css":"src/components/home/homeMain/homeMain.css"}],"src/img/about.png":[function(require,module,exports) {
+module.exports = "/about.09a40596.png";
+},{}],"src/img/about-ellipse.png":[function(require,module,exports) {
+module.exports = "/about-ellipse.35d1b548.png";
+},{}],"src/components/home/homeAbout/homeAbout.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/home/homeAbout/homeAbout.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getHomeAbout = getHomeAbout;
+var _about = _interopRequireDefault(require("../../../img/about.png"));
+var _aboutEllipse = _interopRequireDefault(require("../../../img/about-ellipse.png"));
+require("./homeAbout.css");
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+function getHomeAbout() {
+  var section = document.createElement("section");
+  section.className = "section-about";
+  var container = document.createElement("div");
+  container.className = "container";
+  var homeAboutBlock = document.createElement("div");
+  homeAboutBlock.className = "about-block";
+  homeAboutBlock.innerHTML = "\n        <p class=\"about-block_text\">ABOUT</p>\n        <h2 class=\"about-block_title\">\n            \u201CWe're one of the best furniture agency. Prioritizing customers and making purchases easy are the hallmarks of our agency.\u201D\n        </h2>\n        <div class=\"about-box\">\n            <img class=\"about-img\" src=\"".concat(_about.default, "\" alt=\"\">\n            <div class=\"about_box\">\n                <p class=\"about_box-text\">\n                    Online learning with us does not interfere with your daily life. because learning can be done anytime and anywhere.\n                </p>\n                <button class=\"about_box-btn\">Learn More</button>\n            </div>\n        </div>\n        <div class=\"block\">\n            <img class=\"block-img\" src=\"").concat(_aboutEllipse.default, "\" alt=\"\">\n            <div class=\"blocks\">\n                <h3 class=\"blocks-title\">Arga Danaan</h3>\n                <p class=\"blocks-text\">CEO of Dananz</p>\n            </div>\n        </div>\n    ");
+  section.append(container);
+  container.append(homeAboutBlock);
+  return section;
+}
+},{"../../../img/about.png":"src/img/about.png","../../../img/about-ellipse.png":"src/img/about-ellipse.png","./homeAbout.css":"src/components/home/homeAbout/homeAbout.css"}],"src/page/pageMain/pageMain.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
@@ -291,14 +322,15 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.getPageMain = getPageMain;
 var _homeMain = require("../../components/home/homeMain/homeMain");
+var _homeAbout = require("../../components/home/homeAbout/homeAbout");
 require("./pageMain.css");
 function getPageMain() {
   var main = document.createElement("main");
   main.className = "main";
-  main.append((0, _homeMain.getHomeMain)());
+  main.append((0, _homeMain.getHomeMain)(), (0, _homeAbout.getHomeAbout)());
   return main;
 }
-},{"../../components/home/homeMain/homeMain":"src/components/home/homeMain/homeMain.js","./pageMain.css":"src/page/pageMain/pageMain.css"}],"index.js":[function(require,module,exports) {
+},{"../../components/home/homeMain/homeMain":"src/components/home/homeMain/homeMain.js","../../components/home/homeAbout/homeAbout":"src/components/home/homeAbout/homeAbout.js","./pageMain.css":"src/page/pageMain/pageMain.css"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _pageHeader = require("./src/page/pageHeader/pageHeader.js");
@@ -330,7 +362,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45833" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36513" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

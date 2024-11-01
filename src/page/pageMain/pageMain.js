@@ -1,4 +1,5 @@
 import { getHomeMain } from "../../components/home/homeMain/homeMain";
+import { getHomeAbout } from "../../components/home/homeAbout/homeAbout";
 
 import "./pageMain.css";
 
@@ -9,6 +10,7 @@ export function getPageMain()
 
     main.append(
         getHomeMain(),
+        getHomeAbout(),
     );
 
     return main;
