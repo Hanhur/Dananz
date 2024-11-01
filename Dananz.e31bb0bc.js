@@ -232,13 +232,80 @@ function getPageHeader() {
   container.append((0, _homeHeader.getHomeHeader)());
   return header;
 }
-},{"../../components/home/homeHeader/homeHeader":"src/components/home/homeHeader/homeHeader.js","./pageHeader.css":"src/page/pageHeader/pageHeader.css"}],"index.js":[function(require,module,exports) {
+},{"../../components/home/homeHeader/homeHeader":"src/components/home/homeHeader/homeHeader.js","./pageHeader.css":"src/page/pageHeader/pageHeader.css"}],"src/components/rating/rating.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/rating/rating.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getRating = getRating;
+require("./rating.css");
+function getRating() {
+  var rating = document.createElement("div");
+  rating.classList.add("rating-1", "rating-2");
+  rating.innerHTML = "\n        <div class=\"rating-block\">\n            <span class=\"rating-span\">350+</span>\n            <p class=\"rating-text texts\">Project Completed</p>\n            <span class=\"rating-span\">23+</span>\n            <p class=\"rating-text texts\">Professional Teams</p>\n            <span class=\"rating-span\">15+</span>\n            <p class=\"rating-text\">Years Experience</p>\n        </div>\n    ";
+  return rating;
+}
+},{"./rating.css":"src/components/rating/rating.css"}],"src/img/main-bg.png":[function(require,module,exports) {
+module.exports = "/main-bg.13403173.png";
+},{}],"src/components/home/homeMain/homeMain.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/home/homeMain/homeMain.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getHomeMain = getHomeMain;
+var _rating = require("../../rating/rating");
+var _mainBg = _interopRequireDefault(require("../../../img/main-bg.png"));
+require("./homeMain.css");
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+function getHomeMain() {
+  var section = document.createElement("section");
+  section.className = "section-main";
+  var container = document.createElement("div");
+  container.className = "container";
+  var designBlock = document.createElement("div");
+  designBlock.className = "design-block";
+  designBlock.innerHTML = "\n        <div class=\"desing-box\">\n            <h1 class=\"design-title\">Design your interor with high quality.</h1>\n            <div class=\"desing_box\">\n                <span class=\"desing_box-span\">2022</span>\n                <p class=\"desing_box-text\">ALL RIGHT RESERVED</p>\n            </div>\n        </div>\n        <img class=\"desing-img\" src=\"".concat(_mainBg.default, "\" alt=\"\">\n    ");
+  section.append(container);
+  container.append(designBlock, (0, _rating.getRating)());
+  return section;
+}
+},{"../../rating/rating":"src/components/rating/rating.js","../../../img/main-bg.png":"src/img/main-bg.png","./homeMain.css":"src/components/home/homeMain/homeMain.css"}],"src/page/pageMain/pageMain.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/page/pageMain/pageMain.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getPageMain = getPageMain;
+var _homeMain = require("../../components/home/homeMain/homeMain");
+require("./pageMain.css");
+function getPageMain() {
+  var main = document.createElement("main");
+  main.className = "main";
+  main.append((0, _homeMain.getHomeMain)());
+  return main;
+}
+},{"../../components/home/homeMain/homeMain":"src/components/home/homeMain/homeMain.js","./pageMain.css":"src/page/pageMain/pageMain.css"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _pageHeader = require("./src/page/pageHeader/pageHeader.js");
+var _pageMain = require("./src/page/pageMain/pageMain.js");
 var app = document.querySelector("#app");
-app.append((0, _pageHeader.getPageHeader)());
-},{"./src/page/pageHeader/pageHeader.js":"src/page/pageHeader/pageHeader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+app.append((0, _pageHeader.getPageHeader)(), (0, _pageMain.getPageMain)());
+},{"./src/page/pageHeader/pageHeader.js":"src/page/pageHeader/pageHeader.js","./src/page/pageMain/pageMain.js":"src/page/pageMain/pageMain.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -263,7 +330,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45427" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45833" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
