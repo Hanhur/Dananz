@@ -1,0 +1,25 @@
+.rating-block
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--PrimaryBlue100);
+    width: 252px;
+    padding: 50px 48px;
+}
+.rating-span
+{
+    font-size: 52px;
+    color: var(--GrayscaleWhite);
+    margin-bottom: 20px;
+}
+.rating-text
+{
+    font-size: 16px;
+    color: var(--GrayscaleWhite);
+}
+.texts
+{
+    margin-bottom: 57px;
+}

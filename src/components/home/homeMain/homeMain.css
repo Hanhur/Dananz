@@ -1,0 +1,41 @@
+.desing-box
+{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.design-title
+{
+    font-size: 72px;
+    font-weight: 700;
+    width: 680px;
+    color: var(--GrayscaleBlack50);
+    margin-bottom: 46px;
+}
+.design-title::after
+{
+    content: '';
+    position: absolute;
+    top: 45px;
+    right: 0;
+    left: 500px;
+    bottom: 0;
+    border: 1px solid var(--GrayscaleBlack);
+    width: 683px;
+    height: 2px;
+}
+.desing_box
+{
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    margin-bottom: 46px;
+    font-weight: 500;
+    color: var(--GrayscaleBlack50);
+}
+.rating-1
+{
+    content: '';
+    position: absolute;
+    top: 310px;
+    right: 220px;
+} 
