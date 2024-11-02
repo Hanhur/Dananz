@@ -310,7 +310,38 @@ function getHomeAbout() {
   container.append(homeAboutBlock);
   return section;
 }
-},{"../../../img/about.png":"src/img/about.png","../../../img/about-ellipse.png":"src/img/about-ellipse.png","./homeAbout.css":"src/components/home/homeAbout/homeAbout.css"}],"src/page/pageMain/pageMain.css":[function(require,module,exports) {
+},{"../../../img/about.png":"src/img/about.png","../../../img/about-ellipse.png":"src/img/about-ellipse.png","./homeAbout.css":"src/components/home/homeAbout/homeAbout.css"}],"src/img/arrowRight.svg":[function(require,module,exports) {
+module.exports = "/arrowRight.dbc73834.svg";
+},{}],"src/img/service.png":[function(require,module,exports) {
+module.exports = "/service.f541bf9d.png";
+},{}],"src/components/home/homeService/homeService.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/home/homeService/homeService.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getHomeService = getHomeService;
+var _arrowRight = _interopRequireDefault(require("../../../img/arrowRight.svg"));
+var _service = _interopRequireDefault(require("../../../img/service.png"));
+require("./homeService.css");
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+function getHomeService() {
+  var section = document.createElement("section");
+  section.className = "section-service";
+  var container = document.createElement("div");
+  container.className = "container";
+  var homeServiceBlock = document.createElement("div");
+  homeServiceBlock.className = "service-block";
+  homeServiceBlock.innerHTML = "\n        <div class=\"service-box\">\n            <p class=\"service-block_text\">SERVICE</p>\n            <h2 class=\"service-block_title\">attractive furniture with the best quality.</h2>\n            <p class=\"service-block-text\">\n                Customize your interior design into a dream place with the best designers and quality furniture. \n                We try our best to fulfill your expectations.\n            </p>\n            <ol class=\"service-list\">\n                <li class=\"service-item\">\n                    <a class=\"service-link\" href=\"#\">\n                        <h3 class=\"service-title --title-1\">Interior Design</h3>\n                        <img class=\"service-img\" src=\"".concat(_arrowRight.default, "\">\n                    </a>\n                </li>\n                <li class=\"service-item\">\n                    <a class=\"service-link\" href=\"#\">\n                        <h3 class=\"service-title --title-2\">Consultant</h3>\n                        <img class=\"service-img\" src=\"").concat(_arrowRight.default, "\">\n                    </a>\n                </li>\n                <li class=\"service-item\">\n                    <a class=\"service-link\" href=\"#\">\n                        <h3 class=\"service-title --title-3\">Construction Consultant</h3>\n                        <img class=\"service-img\" src=\"").concat(_arrowRight.default, "\">\n                    </a>\n                </li>\n            </ol>\n        </div>\n        <img class=\"service-block_img\" src=\"").concat(_service.default, "\">\n    ");
+  section.append(container);
+  container.append(homeServiceBlock);
+  return section;
+}
+},{"../../../img/arrowRight.svg":"src/img/arrowRight.svg","../../../img/service.png":"src/img/service.png","./homeService.css":"src/components/home/homeService/homeService.css"}],"src/page/pageMain/pageMain.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
@@ -323,14 +354,15 @@ Object.defineProperty(exports, "__esModule", {
 exports.getPageMain = getPageMain;
 var _homeMain = require("../../components/home/homeMain/homeMain");
 var _homeAbout = require("../../components/home/homeAbout/homeAbout");
+var _homeService = require("../../components/home/homeService/homeService");
 require("./pageMain.css");
 function getPageMain() {
   var main = document.createElement("main");
   main.className = "main";
-  main.append((0, _homeMain.getHomeMain)(), (0, _homeAbout.getHomeAbout)());
+  main.append((0, _homeMain.getHomeMain)(), (0, _homeAbout.getHomeAbout)(), (0, _homeService.getHomeService)());
   return main;
 }
-},{"../../components/home/homeMain/homeMain":"src/components/home/homeMain/homeMain.js","../../components/home/homeAbout/homeAbout":"src/components/home/homeAbout/homeAbout.js","./pageMain.css":"src/page/pageMain/pageMain.css"}],"index.js":[function(require,module,exports) {
+},{"../../components/home/homeMain/homeMain":"src/components/home/homeMain/homeMain.js","../../components/home/homeAbout/homeAbout":"src/components/home/homeAbout/homeAbout.js","../../components/home/homeService/homeService":"src/components/home/homeService/homeService.js","./pageMain.css":"src/page/pageMain/pageMain.css"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _pageHeader = require("./src/page/pageHeader/pageHeader.js");
@@ -362,7 +394,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36513" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "35193" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
