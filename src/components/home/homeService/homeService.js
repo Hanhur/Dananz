@@ -22,22 +22,16 @@ export function getHomeService()
             </p>
             <ol class="service-list">
                 <li class="service-item">
-                    <a class="service-link" href="#">
-                        <h3 class="service-title --title-1">Interior Design</h3>
-                        <img class="service-img" src="${arrowRight}">
-                    </a>
+                    <h3 class="service-title">Interior Design</h3>
+                    <img class="service-img" src="${arrowRight}">
                 </li>
                 <li class="service-item">
-                    <a class="service-link" href="#">
-                        <h3 class="service-title --title-2">Consultant</h3>
-                        <img class="service-img" src="${arrowRight}">
-                    </a>
+                    <h3 class="service-title">Consultant</h3>
+                    <img class="service-img" src="${arrowRight}">
                 </li>
                 <li class="service-item">
-                    <a class="service-link" href="#">
-                        <h3 class="service-title --title-3">Construction Consultant</h3>
-                        <img class="service-img" src="${arrowRight}">
-                    </a>
+                    <h3 class="service-title">Construction Consultant</h3>
+                    <img class="service-img" src="${arrowRight}">
                 </li>
             </ol>
         </div>

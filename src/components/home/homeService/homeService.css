@@ -1,10 +1,7 @@
-.section-service
-{
-    margin-bottom: 160px;
-}
 .service-block
 {
     position: relative;
+    margin-bottom: 522px;
 }
 .service-box
 {
@@ -52,43 +49,29 @@
     flex-direction: column;
     gap: 35px 0;
     counter-reset: item;
-    position: relative;
 }
 .service-item
 {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 0 40px;
     font-size: 24px;
     font-weight: 600;
     color: var(--GrayscaleBlack50);
+    counter-increment: item;
+    padding-left: 65px;
+    cursor: pointer;
+    position: relative;
 }
 .service-item::before 
 {
-    counter-increment: item;
-    content: counter(item, decimal-leading-zero);
-}
-.service-link
-{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: absolute;
+    content: '0' counter(item);
+    left: 0px;
 }
 .service-img
 {
     width: 32px;
-}
-.--title-1
-{
-    margin-right: 560px;
-}
-.--title-2
-{
-    margin-right: 600px;
-}
-.--title-3
-{
-    margin-right: 430px;
 }
 .service-block_img
 {
