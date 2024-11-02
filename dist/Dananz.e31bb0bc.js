@@ -401,7 +401,31 @@ function getHomeMaterial() {
   container.append(homeMaterialBlock);
   return section;
 }
-},{"../../../img/material-1.png":"src/img/material-1.png","../../../img/material-2.png":"src/img/material-2.png","../../../img/material-3.png":"src/img/material-3.png","./homeMaterial.css":"src/components/home/homeMaterial/homeMaterial.css"}],"src/page/pageMain/pageMain.css":[function(require,module,exports) {
+},{"../../../img/material-1.png":"src/img/material-1.png","../../../img/material-2.png":"src/img/material-2.png","../../../img/material-3.png":"src/img/material-3.png","./homeMaterial.css":"src/components/home/homeMaterial/homeMaterial.css"}],"src/components/home/homeContact/homeContact.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/home/homeContact/homeContact.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getHomeContact = getHomeContact;
+require("./homeContact.css");
+function getHomeContact() {
+  var section = document.createElement("section");
+  section.className = "section-contact";
+  var container = document.createElement("div");
+  container.className = "container";
+  var homeContactBlock = document.createElement("div");
+  homeContactBlock.className = "contact-block";
+  homeContactBlock.innerHTML = "\n        <h2 class=\"contact-title\">Let's discuss making your interior like a dream place!</h2>\n        <div class=\"contact-box\">\n            <p class=\"contact-text\">Contact us below to work together to build your amazing interior</p>\n            <button class=\"contact-btn\">Contact Us</button>\n        </div>\n    ";
+  section.append(container);
+  container.append(homeContactBlock);
+  return section;
+}
+},{"./homeContact.css":"src/components/home/homeContact/homeContact.css"}],"src/page/pageMain/pageMain.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
@@ -417,14 +441,15 @@ var _homeAbout = require("../../components/home/homeAbout/homeAbout");
 var _homeService = require("../../components/home/homeService/homeService");
 var _homeProduct = require("../../components/home/homeProduct/homeProduct");
 var _homeMaterial = require("../../components/home/homeMaterial/homeMaterial");
+var _homeContact = require("../../components/home/homeContact/homeContact");
 require("./pageMain.css");
 function getPageMain() {
   var main = document.createElement("main");
   main.className = "main";
-  main.append((0, _homeMain.getHomeMain)(), (0, _homeAbout.getHomeAbout)(), (0, _homeService.getHomeService)(), (0, _homeProduct.getHomeProduct)(), (0, _homeMaterial.getHomeMaterial)());
+  main.append((0, _homeMain.getHomeMain)(), (0, _homeAbout.getHomeAbout)(), (0, _homeService.getHomeService)(), (0, _homeProduct.getHomeProduct)(), (0, _homeMaterial.getHomeMaterial)(), (0, _homeContact.getHomeContact)());
   return main;
 }
-},{"../../components/home/homeMain/homeMain":"src/components/home/homeMain/homeMain.js","../../components/home/homeAbout/homeAbout":"src/components/home/homeAbout/homeAbout.js","../../components/home/homeService/homeService":"src/components/home/homeService/homeService.js","../../components/home/homeProduct/homeProduct":"src/components/home/homeProduct/homeProduct.js","../../components/home/homeMaterial/homeMaterial":"src/components/home/homeMaterial/homeMaterial.js","./pageMain.css":"src/page/pageMain/pageMain.css"}],"index.js":[function(require,module,exports) {
+},{"../../components/home/homeMain/homeMain":"src/components/home/homeMain/homeMain.js","../../components/home/homeAbout/homeAbout":"src/components/home/homeAbout/homeAbout.js","../../components/home/homeService/homeService":"src/components/home/homeService/homeService.js","../../components/home/homeProduct/homeProduct":"src/components/home/homeProduct/homeProduct.js","../../components/home/homeMaterial/homeMaterial":"src/components/home/homeMaterial/homeMaterial.js","../../components/home/homeContact/homeContact":"src/components/home/homeContact/homeContact.js","./pageMain.css":"src/page/pageMain/pageMain.css"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _pageHeader = require("./src/page/pageHeader/pageHeader.js");
@@ -456,7 +481,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39865" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41913" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

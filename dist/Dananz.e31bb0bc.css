@@ -455,5 +455,37 @@
     width: 195px;
     height: 178px;
 }
+.section-contact
+{
+    background-color: var(--PrimaryBlue100);
+    margin-bottom: 80px;
+    padding: 38px 100px;
+}
+.contact-block
+{
+    display: flex;
+    justify-content: space-between;
+}
+.contact-title
+{
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--GrayscaleWhite);
+    width: 613px;
+}
+.contact-text
+{
+    width: 432px;
+    color: var( --GrayscaleBlackLighgray);
+    margin-bottom: 20px;
+}
+.contact-btn
+{
+    font-size: 14px;
+    font-weight: 500;
+    padding: 14px 32px;
+    color: var(--GrayscaleBlack50);
+    background-color: var(--GrayscaleWhite);
+}
 
 /*# sourceMappingURL=/Dananz.e31bb0bc.css.map */
