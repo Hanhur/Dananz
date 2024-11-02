@@ -341,7 +341,33 @@ function getHomeService() {
   container.append(homeServiceBlock);
   return section;
 }
-},{"../../../img/arrowRight.svg":"src/img/arrowRight.svg","../../../img/service.png":"src/img/service.png","./homeService.css":"src/components/home/homeService/homeService.css"}],"src/page/pageMain/pageMain.css":[function(require,module,exports) {
+},{"../../../img/arrowRight.svg":"src/img/arrowRight.svg","../../../img/service.png":"src/img/service.png","./homeService.css":"src/components/home/homeService/homeService.css"}],"src/components/home/homeProduct/homeProduct.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/home/homeProduct/homeProduct.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getHomeProduct = getHomeProduct;
+var _arrowRight = _interopRequireDefault(require("../../../img/arrowRight.svg"));
+require("./homeProduct.css");
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+function getHomeProduct() {
+  var section = document.createElement("section");
+  section.className = "section-product";
+  var container = document.createElement("div");
+  container.className = "container";
+  var homeProductBlock = document.createElement("div");
+  homeProductBlock.className = "product-block";
+  homeProductBlock.innerHTML = "\n        <p class=\"product-block_text\">PRODUCT</p>\n        <div class=\"product-box\">\n            <h2 class=\"product-box_title\">Choose your product themes.</h2>\n            <p class=\"product-box_text\">Find the theme you want. If our choice of theme is not what you want, you can customize it as you want.</p>\n        </div>\n        <ol class=\"product-list\">\n            <li class=\"product-item\">\n                <div class=\"products\">\n                    <h3 class=\"product-title\">Vintage</h3>\n                    <p class=\"product-text\">the use of simple and limited elements to get the best effect or impression.</p>\n                </div>\n                <img class=\"product-img\" src=\"".concat(_arrowRight.default, "\">\n            </li>\n            <li class=\"product-item\">\n                <div class=\"products\">\n                    <h3 class=\"product-title\">Minimalist</h3>\n                    <p class=\"product-text\">the use of simple and limited elements to get the best effect or impression.</p>\n                </div>\n                <img class=\"product-img\" src=\"").concat(_arrowRight.default, "\">\n            </li>\n            <li class=\"product-item\">\n                <div class=\"products\">\n                    <h3 class=\"product-title\">Modern</h3>\n                    <p class=\"product-text\">the use of simple and limited elements to get the best effect or impression.</p>\n                </div>\n                <img class=\"product-img\" src=\"").concat(_arrowRight.default, "\">\n            </li>\n            <li class=\"product-item\">\n                <div class=\"products\">\n                    <h3 class=\"product-title\">Transitional</h3>\n                    <p class=\"product-text\">the use of simple and limited elements to get the best effect or impression.</p>\n                </div>\n                <img class=\"product-img\" src=\"").concat(_arrowRight.default, "\">\n            </li>\n        </ol>\n    ");
+  section.append(container);
+  container.append(homeProductBlock);
+  return section;
+}
+},{"../../../img/arrowRight.svg":"src/img/arrowRight.svg","./homeProduct.css":"src/components/home/homeProduct/homeProduct.css"}],"src/page/pageMain/pageMain.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
@@ -355,14 +381,15 @@ exports.getPageMain = getPageMain;
 var _homeMain = require("../../components/home/homeMain/homeMain");
 var _homeAbout = require("../../components/home/homeAbout/homeAbout");
 var _homeService = require("../../components/home/homeService/homeService");
+var _homeProduct = require("../../components/home/homeProduct/homeProduct");
 require("./pageMain.css");
 function getPageMain() {
   var main = document.createElement("main");
   main.className = "main";
-  main.append((0, _homeMain.getHomeMain)(), (0, _homeAbout.getHomeAbout)(), (0, _homeService.getHomeService)());
+  main.append((0, _homeMain.getHomeMain)(), (0, _homeAbout.getHomeAbout)(), (0, _homeService.getHomeService)(), (0, _homeProduct.getHomeProduct)());
   return main;
 }
-},{"../../components/home/homeMain/homeMain":"src/components/home/homeMain/homeMain.js","../../components/home/homeAbout/homeAbout":"src/components/home/homeAbout/homeAbout.js","../../components/home/homeService/homeService":"src/components/home/homeService/homeService.js","./pageMain.css":"src/page/pageMain/pageMain.css"}],"index.js":[function(require,module,exports) {
+},{"../../components/home/homeMain/homeMain":"src/components/home/homeMain/homeMain.js","../../components/home/homeAbout/homeAbout":"src/components/home/homeAbout/homeAbout.js","../../components/home/homeService/homeService":"src/components/home/homeService/homeService.js","../../components/home/homeProduct/homeProduct":"src/components/home/homeProduct/homeProduct.js","./pageMain.css":"src/page/pageMain/pageMain.css"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _pageHeader = require("./src/page/pageHeader/pageHeader.js");
@@ -394,7 +421,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37701" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "40913" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
