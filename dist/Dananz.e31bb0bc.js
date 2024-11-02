@@ -449,14 +449,100 @@ function getPageMain() {
   main.append((0, _homeMain.getHomeMain)(), (0, _homeAbout.getHomeAbout)(), (0, _homeService.getHomeService)(), (0, _homeProduct.getHomeProduct)(), (0, _homeMaterial.getHomeMaterial)(), (0, _homeContact.getHomeContact)());
   return main;
 }
-},{"../../components/home/homeMain/homeMain":"src/components/home/homeMain/homeMain.js","../../components/home/homeAbout/homeAbout":"src/components/home/homeAbout/homeAbout.js","../../components/home/homeService/homeService":"src/components/home/homeService/homeService.js","../../components/home/homeProduct/homeProduct":"src/components/home/homeProduct/homeProduct.js","../../components/home/homeMaterial/homeMaterial":"src/components/home/homeMaterial/homeMaterial.js","../../components/home/homeContact/homeContact":"src/components/home/homeContact/homeContact.js","./pageMain.css":"src/page/pageMain/pageMain.css"}],"index.js":[function(require,module,exports) {
+},{"../../components/home/homeMain/homeMain":"src/components/home/homeMain/homeMain.js","../../components/home/homeAbout/homeAbout":"src/components/home/homeAbout/homeAbout.js","../../components/home/homeService/homeService":"src/components/home/homeService/homeService.js","../../components/home/homeProduct/homeProduct":"src/components/home/homeProduct/homeProduct.js","../../components/home/homeMaterial/homeMaterial":"src/components/home/homeMaterial/homeMaterial.js","../../components/home/homeContact/homeContact":"src/components/home/homeContact/homeContact.js","./pageMain.css":"src/page/pageMain/pageMain.css"}],"src/img/footer-img/footer-ellipse.svg":[function(require,module,exports) {
+module.exports = "/footer-ellipse.36ff19b7.svg";
+},{}],"src/img/footer-img/footer-vector.svg":[function(require,module,exports) {
+module.exports = "/footer-vector.eafc8784.svg";
+},{}],"src/img/footer-img/facebook.svg":[function(require,module,exports) {
+module.exports = "/facebook.1ac1939b.svg";
+},{}],"src/img/footer-img/instagram.svg":[function(require,module,exports) {
+module.exports = "/instagram.aaa1d66f.svg";
+},{}],"src/img/footer-img/tiktok.svg":[function(require,module,exports) {
+module.exports = "/tiktok.ba175fd7.svg";
+},{}],"src/img/footer-img/youtube.svg":[function(require,module,exports) {
+module.exports = "/youtube.4de381da.svg";
+},{}],"src/components/home/homeFooter/homeFooter.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/home/homeFooter/homeFooter.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getHomeFooter = getHomeFooter;
+var _logo = _interopRequireDefault(require("../../../img/logo.svg"));
+var _footerEllipse = _interopRequireDefault(require("../../../img/footer-img/footer-ellipse.svg"));
+var _footerVector = _interopRequireDefault(require("../../../img/footer-img/footer-vector.svg"));
+var _facebook = _interopRequireDefault(require("../../../img/footer-img/facebook.svg"));
+var _instagram = _interopRequireDefault(require("../../../img/footer-img/instagram.svg"));
+var _tiktok = _interopRequireDefault(require("../../../img/footer-img/tiktok.svg"));
+var _youtube = _interopRequireDefault(require("../../../img/footer-img/youtube.svg"));
+require("./homeFooter.css");
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+var socialArray = [_facebook.default, _instagram.default, _tiktok.default, _youtube.default];
+function getHomeFooter() {
+  var homeFooter = document.createElement("div");
+  homeFooter.className = "home-footer";
+  var homeFooterBlock = document.createElement("div");
+  homeFooterBlock.className = "footer-block";
+  var homeFooterImg = document.createElement("img");
+  homeFooterImg.className = "footer-img";
+  homeFooterImg.src = _logo.default;
+  homeFooterImg.alt = "Dananz";
+  var footerTitle = document.createElement("h2");
+  footerTitle.className = "footer-title";
+  footerTitle.textContent = "One of the best furniture agency.";
+  var footerForm = document.createElement("form");
+  footerForm.className = "footer-form";
+  footerForm.innerHTML = "\n        <div class=\"form-box\">\n            <img class=\"form-img\" src=\"".concat(_footerEllipse.default, "\" alt=\"Ellipse\">\n            <p class=\"form-text\">Enter  your email to get the laterst news</p>\n        </div>\n        <input class=\"form-input\" type=\"text\" placeholder=\"Email Address\">\n            <img class=\"input-img\" src=\"").concat(_footerVector.default, "\" alt=\"Vector\">\n        </input>\n    ");
+  var homeFooterSocial = document.createElement("div");
+  homeFooterSocial.className = "footer-social";
+  homeFooterSocial.innerHTML = "<p class=\"social-text\">Follow us On</p>";
+  socialArray.forEach(function (item) {
+    var homeFooterSocialImg = document.createElement("img");
+    homeFooterSocialImg.className = "social-img";
+    homeFooterSocialImg.src = item;
+    homeFooterSocialImg.alt = "Example image";
+    homeFooterSocial.appendChild(homeFooterSocialImg);
+  });
+  homeFooter.append(homeFooterBlock, footerForm);
+  homeFooterBlock.append(homeFooterImg, footerTitle);
+  footerForm.append(homeFooterSocial);
+  return homeFooter;
+}
+},{"../../../img/logo.svg":"src/img/logo.svg","../../../img/footer-img/footer-ellipse.svg":"src/img/footer-img/footer-ellipse.svg","../../../img/footer-img/footer-vector.svg":"src/img/footer-img/footer-vector.svg","../../../img/footer-img/facebook.svg":"src/img/footer-img/facebook.svg","../../../img/footer-img/instagram.svg":"src/img/footer-img/instagram.svg","../../../img/footer-img/tiktok.svg":"src/img/footer-img/tiktok.svg","../../../img/footer-img/youtube.svg":"src/img/footer-img/youtube.svg","./homeFooter.css":"src/components/home/homeFooter/homeFooter.css"}],"src/page/pageFooter/pageFooter.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/page/pageFooter/pageFooter.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getPageFooter = getPageFooter;
+var _homeFooter = require("../../components/home/homeFooter/homeFooter");
+require("./pageFooter.css");
+function getPageFooter() {
+  var footer = document.createElement("footer");
+  footer.className = "footer";
+  var container = document.createElement("div");
+  container.className = "container";
+  footer.append(container);
+  container.append((0, _homeFooter.getHomeFooter)());
+  return footer;
+}
+},{"../../components/home/homeFooter/homeFooter":"src/components/home/homeFooter/homeFooter.js","./pageFooter.css":"src/page/pageFooter/pageFooter.css"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _pageHeader = require("./src/page/pageHeader/pageHeader.js");
 var _pageMain = require("./src/page/pageMain/pageMain.js");
+var _pageFooter = require("./src/page/pageFooter/pageFooter.js");
 var app = document.querySelector("#app");
-app.append((0, _pageHeader.getPageHeader)(), (0, _pageMain.getPageMain)());
-},{"./src/page/pageHeader/pageHeader.js":"src/page/pageHeader/pageHeader.js","./src/page/pageMain/pageMain.js":"src/page/pageMain/pageMain.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+app.append((0, _pageHeader.getPageHeader)(), (0, _pageMain.getPageMain)(), (0, _pageFooter.getPageFooter)());
+},{"./src/page/pageHeader/pageHeader.js":"src/page/pageHeader/pageHeader.js","./src/page/pageMain/pageMain.js":"src/page/pageMain/pageMain.js","./src/page/pageFooter/pageFooter.js":"src/page/pageFooter/pageFooter.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -481,7 +567,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41913" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42299" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
