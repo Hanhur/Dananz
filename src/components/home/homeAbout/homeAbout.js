@@ -1,4 +1,4 @@
-import aboutIng from "../../../img/about.png";
+import aboutPng from "../../../img/about.png";
 import aboutEllipse from "../../../img/about-ellipse.png";
 import "./homeAbout.css";
 
@@ -18,7 +18,7 @@ export function getHomeAbout()
             “We're one of the best furniture agency. Prioritizing customers and making purchases easy are the hallmarks of our agency.”
         </h2>
         <div class="about-box">
-            <img class="about-img" src="${aboutIng}" alt="">
+            <img class="about-img" src="${aboutPng}" alt="">
             <div class="about_box">
                 <p class="about_box-text">
                     Online learning with us does not interfere with your daily life. because learning can be done anytime and anywhere.

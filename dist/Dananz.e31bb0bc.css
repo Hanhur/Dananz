@@ -363,5 +363,97 @@
 {
     width: 32px;
 }
+.section-material
+{
+    margin-bottom: 120px;
+}
+.material-block
+{
+    display: flex;
+}
+.material-box
+{
+    padding-top: 47px;
+    position: relative;
+}
+.material_text
+{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--GrayscaleBlack70);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.material_text::after
+{
+    content: '';
+    position: absolute;
+    top: 55px;
+    left: 95px;
+    border: 1px solid var(--GrayscaleBlack);
+    width: 500px;
+    height: 2px;
+}
+.material-title
+{
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--GrayscaleBlack50);
+    width: 348px;
+    margin-bottom: 10px;
+}
+.material-text
+{
+    width: 497px;
+    color: var(--GrayscaleBlack10);
+    margin-bottom: 23px;
+    margin-right: 80px;
+}
+.material-btn
+{
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--GrayscaleBlack50);
+    border: 1px solid var(--GrayscaleBlack30);
+    padding: 14px 32px;
+}
+.material-images
+{
+    display: flex;
+    position: relative;
+}
+.material-png1
+{
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 100px;
+    left: 0;
+}
+.material_images
+{
+    display: flex;
+    flex-direction: column;
+    gap: 30px 0;
+}
+.material_images
+{
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 335px;
+}
+.material-png2
+{
+    width: 220px;
+    height: 215px;
+}
+.material-png3
+{
+    width: 195px;
+    height: 178px;
+}
 
 /*# sourceMappingURL=/Dananz.e31bb0bc.css.map */

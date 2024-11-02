@@ -2,6 +2,7 @@ import { getHomeMain } from "../../components/home/homeMain/homeMain";
 import { getHomeAbout } from "../../components/home/homeAbout/homeAbout";
 import { getHomeService } from "../../components/home/homeService/homeService";
 import { getHomeProduct } from "../../components/home/homeProduct/homeProduct";
+import { getHomeMaterial } from "../../components/home/homeMaterial/homeMaterial";
 
 import "./pageMain.css";
 
@@ -15,6 +16,7 @@ export function getPageMain()
         getHomeAbout(),
         getHomeService(),
         getHomeProduct(),
+        getHomeMaterial(),
     );
 
     return main;
