@@ -191,5 +191,105 @@
     color: var(--GrayscaleBlack10);
     width: 133px;
 }
+.section-service
+{
+    margin-bottom: 160px;
+}
+.service-block
+{
+    position: relative;
+}
+.service-box
+{
+    width: 883px;
+    background-color: var(--GrayscaleWhite);
+    padding-right: 40px;
+    padding-bottom: 41px;
+}
+.service-block_text
+{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--GrayscaleBlack);
+    text-transform: uppercase;
+    width: 65px;
+    margin-bottom: 20px;
+}
+.service-block_text::after
+{
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: 80px;
+    border: 1px solid var(--GrayscaleBlack);
+    width: 516px;
+    height: 2px;
+}
+.service-block_title
+{
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--GrayscaleBlack50);
+    width: 780px;
+    margin-bottom: 24px;
+}
+.service-block-text
+{
+    color: var(--GrayscaleBlack10);
+    width: 470px;
+    margin-bottom: 40px;
+}
+.service-list
+{
+    display: flex;
+    flex-direction: column;
+    gap: 35px 0;
+    counter-reset: item;
+    position: relative;
+}
+.service-item
+{
+    display: flex;
+    align-items: center;
+    gap: 0 40px;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--GrayscaleBlack50);
+}
+.service-item::before 
+{
+    counter-increment: item;
+    content: counter(item, decimal-leading-zero);
+}
+.service-link
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.service-img
+{
+    width: 32px;
+}
+.--title-1
+{
+    margin-right: 560px;
+}
+.--title-2
+{
+    margin-right: 600px;
+}
+.--title-3
+{
+    margin-right: 430px;
+}
+.service-block_img
+{
+    content: '';
+    position: absolute;
+    top: 250px;
+    left: 125px;
+    z-index: -1;
+}
 
 /*# sourceMappingURL=/Dananz.e31bb0bc.css.map */

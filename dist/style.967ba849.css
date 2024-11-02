@@ -27,9 +27,10 @@ button
     cursor: pointer;
 }
 
-ul 
+ul,
+ol
 {
-    list-style: none;
+    list-style-type: none;
 }
 
 body 
