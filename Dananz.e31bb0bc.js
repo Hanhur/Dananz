@@ -401,31 +401,7 @@ function getHomeMaterial() {
   container.append(homeMaterialBlock);
   return section;
 }
-},{"../../../img/material-1.png":"src/img/material-1.png","../../../img/material-2.png":"src/img/material-2.png","../../../img/material-3.png":"src/img/material-3.png","./homeMaterial.css":"src/components/home/homeMaterial/homeMaterial.css"}],"src/components/home/homeContact/homeContact.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/home/homeContact/homeContact.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.getHomeContact = getHomeContact;
-require("./homeContact.css");
-function getHomeContact() {
-  var section = document.createElement("section");
-  section.className = "section-contact";
-  var container = document.createElement("div");
-  container.className = "container";
-  var homeContactBlock = document.createElement("div");
-  homeContactBlock.className = "contact-block";
-  homeContactBlock.innerHTML = "\n        <h2 class=\"contact-title\">Let's discuss making your interior like a dream place!</h2>\n        <div class=\"contact-box\">\n            <p class=\"contact-text\">Contact us below to work together to build your amazing interior</p>\n            <button class=\"contact-btn\">Contact Us</button>\n        </div>\n    ";
-  section.append(container);
-  container.append(homeContactBlock);
-  return section;
-}
-},{"./homeContact.css":"src/components/home/homeContact/homeContact.css"}],"src/page/pageMain/pageMain.css":[function(require,module,exports) {
+},{"../../../img/material-1.png":"src/img/material-1.png","../../../img/material-2.png":"src/img/material-2.png","../../../img/material-3.png":"src/img/material-3.png","./homeMaterial.css":"src/components/home/homeMaterial/homeMaterial.css"}],"src/page/pageMain/pageMain.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
@@ -441,15 +417,61 @@ var _homeAbout = require("../../components/home/homeAbout/homeAbout");
 var _homeService = require("../../components/home/homeService/homeService");
 var _homeProduct = require("../../components/home/homeProduct/homeProduct");
 var _homeMaterial = require("../../components/home/homeMaterial/homeMaterial");
-var _homeContact = require("../../components/home/homeContact/homeContact");
 require("./pageMain.css");
 function getPageMain() {
   var main = document.createElement("main");
   main.className = "main";
-  main.append((0, _homeMain.getHomeMain)(), (0, _homeAbout.getHomeAbout)(), (0, _homeService.getHomeService)(), (0, _homeProduct.getHomeProduct)(), (0, _homeMaterial.getHomeMaterial)(), (0, _homeContact.getHomeContact)());
+  main.append((0, _homeMain.getHomeMain)(), (0, _homeAbout.getHomeAbout)(), (0, _homeService.getHomeService)(), (0, _homeProduct.getHomeProduct)(), (0, _homeMaterial.getHomeMaterial)());
   return main;
 }
-},{"../../components/home/homeMain/homeMain":"src/components/home/homeMain/homeMain.js","../../components/home/homeAbout/homeAbout":"src/components/home/homeAbout/homeAbout.js","../../components/home/homeService/homeService":"src/components/home/homeService/homeService.js","../../components/home/homeProduct/homeProduct":"src/components/home/homeProduct/homeProduct.js","../../components/home/homeMaterial/homeMaterial":"src/components/home/homeMaterial/homeMaterial.js","../../components/home/homeContact/homeContact":"src/components/home/homeContact/homeContact.js","./pageMain.css":"src/page/pageMain/pageMain.css"}],"src/img/footer-img/footer-ellipse.svg":[function(require,module,exports) {
+},{"../../components/home/homeMain/homeMain":"src/components/home/homeMain/homeMain.js","../../components/home/homeAbout/homeAbout":"src/components/home/homeAbout/homeAbout.js","../../components/home/homeService/homeService":"src/components/home/homeService/homeService.js","../../components/home/homeProduct/homeProduct":"src/components/home/homeProduct/homeProduct.js","../../components/home/homeMaterial/homeMaterial":"src/components/home/homeMaterial/homeMaterial.js","./pageMain.css":"src/page/pageMain/pageMain.css"}],"src/img/about-main.png":[function(require,module,exports) {
+module.exports = "/about-main.c683c70b.png";
+},{}],"src/components/about/aboutMain/aboutMain.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/about/aboutMain/aboutMain.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getAboutMain = getAboutMain;
+var _aboutMain = _interopRequireDefault(require("../../../img/about-main.png"));
+require("./aboutMain.css");
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+function getAboutMain() {
+  var section = document.createElement("section");
+  section.className = "section-aboutMain";
+  var container = document.createElement("div");
+  container.className = "container";
+  var aboutMainBlock = document.createElement("div");
+  aboutMainBlock.className = "aboutMain-block";
+  aboutMainBlock.innerHTML = "\n        <h1 class=\"aboutMain-title\">About</h1>\n        <p class=\"aboutMain-text\">\n            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\n        </p>\n        <img class=\"aboutMain-img\" src=\"".concat(_aboutMain.default, "\">\n    ");
+  section.append(container);
+  container.append(aboutMainBlock);
+  return section;
+}
+},{"../../../img/about-main.png":"src/img/about-main.png","./aboutMain.css":"src/components/about/aboutMain/aboutMain.css"}],"src/page/pageAbout/pageAbout.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/page/pageAbout/pageAbout.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getPageAboutMain = getPageAboutMain;
+var _aboutMain = require("../../components/about/aboutMain/aboutMain");
+require("./pageAbout.css");
+function getPageAboutMain() {
+  var aboutMain = document.createElement("main");
+  aboutMain.className = "about-main";
+  aboutMain.append((0, _aboutMain.getAboutMain)());
+  return aboutMain;
+}
+},{"../../components/about/aboutMain/aboutMain":"src/components/about/aboutMain/aboutMain.js","./pageAbout.css":"src/page/pageAbout/pageAbout.css"}],"src/img/footer-img/footer-ellipse.svg":[function(require,module,exports) {
 module.exports = "/footer-ellipse.36ff19b7.svg";
 },{}],"src/img/footer-img/footer-vector.svg":[function(require,module,exports) {
 module.exports = "/footer-vector.eafc8784.svg";
@@ -512,7 +534,31 @@ function getHomeFooter() {
   footerForm.append(homeFooterSocial);
   return homeFooter;
 }
-},{"../../../img/logo.svg":"src/img/logo.svg","../../../img/footer-img/footer-ellipse.svg":"src/img/footer-img/footer-ellipse.svg","../../../img/footer-img/footer-vector.svg":"src/img/footer-img/footer-vector.svg","../../../img/footer-img/facebook.svg":"src/img/footer-img/facebook.svg","../../../img/footer-img/instagram.svg":"src/img/footer-img/instagram.svg","../../../img/footer-img/tiktok.svg":"src/img/footer-img/tiktok.svg","../../../img/footer-img/youtube.svg":"src/img/footer-img/youtube.svg","./homeFooter.css":"src/components/home/homeFooter/homeFooter.css"}],"src/page/pageFooter/pageFooter.css":[function(require,module,exports) {
+},{"../../../img/logo.svg":"src/img/logo.svg","../../../img/footer-img/footer-ellipse.svg":"src/img/footer-img/footer-ellipse.svg","../../../img/footer-img/footer-vector.svg":"src/img/footer-img/footer-vector.svg","../../../img/footer-img/facebook.svg":"src/img/footer-img/facebook.svg","../../../img/footer-img/instagram.svg":"src/img/footer-img/instagram.svg","../../../img/footer-img/tiktok.svg":"src/img/footer-img/tiktok.svg","../../../img/footer-img/youtube.svg":"src/img/footer-img/youtube.svg","./homeFooter.css":"src/components/home/homeFooter/homeFooter.css"}],"src/components/home/homeContact/homeContact.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/home/homeContact/homeContact.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getHomeContact = getHomeContact;
+require("./homeContact.css");
+function getHomeContact() {
+  var section = document.createElement("section");
+  section.className = "section-contact";
+  var container = document.createElement("div");
+  container.className = "container";
+  var homeContactBlock = document.createElement("div");
+  homeContactBlock.className = "contact-block";
+  homeContactBlock.innerHTML = "\n        <h2 class=\"contact-title\">Let's discuss making your interior like a dream place!</h2>\n        <div class=\"contact-box\">\n            <p class=\"contact-text\">Contact us below to work together to build your amazing interior</p>\n            <button class=\"contact-btn\">Contact Us</button>\n        </div>\n    ";
+  section.append(container);
+  container.append(homeContactBlock);
+  return section;
+}
+},{"./homeContact.css":"src/components/home/homeContact/homeContact.css"}],"src/page/pageFooter/pageFooter.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
@@ -524,6 +570,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.getPageFooter = getPageFooter;
 var _homeFooter = require("../../components/home/homeFooter/homeFooter");
+var _homeContact = require("../../components/home/homeContact/homeContact");
 require("./pageFooter.css");
 function getPageFooter() {
   var footer = document.createElement("footer");
@@ -531,18 +578,21 @@ function getPageFooter() {
   var container = document.createElement("div");
   container.className = "container";
   footer.append(container);
-  container.append((0, _homeFooter.getHomeFooter)());
+  container.append((0, _homeContact.getHomeContact)(), (0, _homeFooter.getHomeFooter)());
   return footer;
 }
-},{"../../components/home/homeFooter/homeFooter":"src/components/home/homeFooter/homeFooter.js","./pageFooter.css":"src/page/pageFooter/pageFooter.css"}],"index.js":[function(require,module,exports) {
+},{"../../components/home/homeFooter/homeFooter":"src/components/home/homeFooter/homeFooter.js","../../components/home/homeContact/homeContact":"src/components/home/homeContact/homeContact.js","./pageFooter.css":"src/page/pageFooter/pageFooter.css"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _pageHeader = require("./src/page/pageHeader/pageHeader.js");
 var _pageMain = require("./src/page/pageMain/pageMain.js");
+var _pageAbout = require("./src/page/pageAbout/pageAbout.js");
 var _pageFooter = require("./src/page/pageFooter/pageFooter.js");
 var app = document.querySelector("#app");
-app.append((0, _pageHeader.getPageHeader)(), (0, _pageMain.getPageMain)(), (0, _pageFooter.getPageFooter)());
-},{"./src/page/pageHeader/pageHeader.js":"src/page/pageHeader/pageHeader.js","./src/page/pageMain/pageMain.js":"src/page/pageMain/pageMain.js","./src/page/pageFooter/pageFooter.js":"src/page/pageFooter/pageFooter.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+app.append((0, _pageHeader.getPageHeader)(),
+// getPageMain(),
+(0, _pageAbout.getPageAboutMain)(), (0, _pageFooter.getPageFooter)());
+},{"./src/page/pageHeader/pageHeader.js":"src/page/pageHeader/pageHeader.js","./src/page/pageMain/pageMain.js":"src/page/pageMain/pageMain.js","./src/page/pageAbout/pageAbout.js":"src/page/pageAbout/pageAbout.js","./src/page/pageFooter/pageFooter.js":"src/page/pageFooter/pageFooter.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -567,7 +617,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42299" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46069" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
