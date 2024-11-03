@@ -481,7 +481,99 @@ function getAboutAchievement() {
   container.append(aboutAchievementBlock, (0, _rating.getRating)());
   return section;
 }
-},{"../../rating/rating":"src/components/rating/rating.js","../../../img/achievement.png":"src/img/achievement.png","./aboutAchievement.css":"src/components/about/aboutAchievement/aboutAchievement.css"}],"src/page/pageAbout/pageAbout.css":[function(require,module,exports) {
+},{"../../rating/rating":"src/components/rating/rating.js","../../../img/achievement.png":"src/img/achievement.png","./aboutAchievement.css":"src/components/about/aboutAchievement/aboutAchievement.css"}],"src/img/choose-ellipse.png":[function(require,module,exports) {
+module.exports = "/choose-ellipse.1027eea2.png";
+},{}],"src/components/choose/quality.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/choose/quality.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getQuality = getQuality;
+var _chooseEllipse = _interopRequireDefault(require("../../img/choose-ellipse.png"));
+require("./quality.css");
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+function getQuality() {
+  var qualityBlock = document.createElement("div");
+  qualityBlock.className = "quality-block";
+  qualityBlock.innerHTML = "\n        <img class=\"quality-img\" src=\"".concat(_chooseEllipse.default, "\">\n        <h3 class=\"quality-title\">High Quality</h3>\n        <p class=\"quality-text\">\n            Customize your interior design into a dream place with the best designers and quality furniture. \n            We try our best to fulfill your expectations.\n        </p>\n    ");
+  return qualityBlock;
+}
+},{"../../img/choose-ellipse.png":"src/img/choose-ellipse.png","./quality.css":"src/components/choose/quality.css"}],"src/components/choose/designer.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/choose/designer.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getDesigner = getDesigner;
+var _chooseEllipse = _interopRequireDefault(require("../../img/choose-ellipse.png"));
+require("./designer.css");
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+function getDesigner() {
+  var designerBlock = document.createElement("div");
+  designerBlock.className = "designer-block";
+  designerBlock.innerHTML = "\n        <img class=\"designer-img\" src=\"".concat(_chooseEllipse.default, "\">\n        <h3 class=\"designer-title\">Professional Designer</h3>\n        <p class=\"designer-text\">\n            Customize your interior design into a dream place with the best designers and quality furniture. \n            We try our best to fulfill your expectations.\n        </p>\n    ");
+  return designerBlock;
+}
+},{"../../img/choose-ellipse.png":"src/img/choose-ellipse.png","./designer.css":"src/components/choose/designer.css"}],"src/components/choose/services.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/choose/services.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getServices = getServices;
+var _chooseEllipse = _interopRequireDefault(require("../../img/choose-ellipse.png"));
+require("./services.css");
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+function getServices() {
+  var servicecsBlock = document.createElement("div");
+  servicecsBlock.className = "services-block";
+  servicecsBlock.innerHTML = "\n        <img class=\"services-img\" src=\"".concat(_chooseEllipse.default, "\">\n        <h3 class=\"services-title\">The Best Services</h3>\n        <p class=\"services-text\">\n            Customize your interior design into a dream place with the best designers and quality furniture. \n            We try our best to fulfill your expectations.\n        </p>\n    ");
+  return servicecsBlock;
+}
+},{"../../img/choose-ellipse.png":"src/img/choose-ellipse.png","./services.css":"src/components/choose/services.css"}],"src/components/about/aboutService/aboutService.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/about/aboutService/aboutService.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getAboutService = getAboutService;
+var _quality = require("../../choose/quality");
+var _designer = require("../../choose/designer");
+var _services = require("../../choose/services");
+require("./aboutService.css");
+function getAboutService() {
+  var section = document.createElement("section");
+  section.className = "section-aboutService";
+  var container = document.createElement("div");
+  container.className = "container";
+  var aboutServiceBlock = document.createElement("div");
+  aboutServiceBlock.className = "aboutService-block";
+  aboutServiceBlock.innerHTML = "\n        <p class=\"aboutService_text\">SERVICE</p>\n        <h2 class=\"aboutService-title\">Why Choose Us</h2>\n        <p class=\"aboutService-text\">\n            Customize your interior design into a dream place with the best designers and quality furniture. \n            We try our best to fulfill your expectations.\n        </p>\n    ";
+  var aboutServiceChoose = document.createElement("div");
+  aboutServiceChoose.className = "aboutService-choose";
+  section.append(container);
+  container.append(aboutServiceBlock, aboutServiceChoose);
+  aboutServiceChoose.append((0, _quality.getQuality)(), (0, _designer.getDesigner)(), (0, _services.getServices)());
+  return section;
+}
+},{"../../choose/quality":"src/components/choose/quality.js","../../choose/designer":"src/components/choose/designer.js","../../choose/services":"src/components/choose/services.js","./aboutService.css":"src/components/about/aboutService/aboutService.css"}],"src/page/pageAbout/pageAbout.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
@@ -494,14 +586,15 @@ Object.defineProperty(exports, "__esModule", {
 exports.getPageAboutMain = getPageAboutMain;
 var _aboutMain = require("../../components/about/aboutMain/aboutMain");
 var _aboutAchievement = require("../../components/about/aboutAchievement/aboutAchievement");
+var _aboutService = require("../../components/about/aboutService/aboutService");
 require("./pageAbout.css");
 function getPageAboutMain() {
   var aboutMain = document.createElement("main");
   aboutMain.className = "about-main";
-  aboutMain.append((0, _aboutMain.getAboutMain)(), (0, _aboutAchievement.getAboutAchievement)());
+  aboutMain.append((0, _aboutMain.getAboutMain)(), (0, _aboutAchievement.getAboutAchievement)(), (0, _aboutService.getAboutService)());
   return aboutMain;
 }
-},{"../../components/about/aboutMain/aboutMain":"src/components/about/aboutMain/aboutMain.js","../../components/about/aboutAchievement/aboutAchievement":"src/components/about/aboutAchievement/aboutAchievement.js","./pageAbout.css":"src/page/pageAbout/pageAbout.css"}],"src/img/footer-img/footer-ellipse.svg":[function(require,module,exports) {
+},{"../../components/about/aboutMain/aboutMain":"src/components/about/aboutMain/aboutMain.js","../../components/about/aboutAchievement/aboutAchievement":"src/components/about/aboutAchievement/aboutAchievement.js","../../components/about/aboutService/aboutService":"src/components/about/aboutService/aboutService.js","./pageAbout.css":"src/page/pageAbout/pageAbout.css"}],"src/img/footer-img/footer-ellipse.svg":[function(require,module,exports) {
 module.exports = "/footer-ellipse.36ff19b7.svg";
 },{}],"src/img/footer-img/footer-vector.svg":[function(require,module,exports) {
 module.exports = "/footer-vector.eafc8784.svg";
@@ -647,7 +740,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34939" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33155" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
