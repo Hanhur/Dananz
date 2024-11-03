@@ -455,37 +455,25 @@
     width: 195px;
     height: 178px;
 }
-.section-contact
+.section-aboutMain
 {
-    background-color: var(--PrimaryBlue100);
-    margin-bottom: 80px;
-    padding: 38px 100px;
+    margin-bottom: 112px;
 }
-.contact-block
+.aboutMain-title
 {
-    display: flex;
-    justify-content: space-between;
+    font-size: 56px;
+    font-weight: 700;
+    color: var(--GrayscaleBlack);
+    width: 176px;
+    margin: 0 auto 36px;
+    text-align: center;
 }
-.contact-title
+.aboutMain-text
 {
-    font-size: 36px;
-    font-weight: 600;
-    color: var(--GrayscaleWhite);
-    width: 613px;
-}
-.contact-text
-{
-    width: 432px;
-    color: var( --GrayscaleBlackLighgray);
-    margin-bottom: 20px;
-}
-.contact-btn
-{
-    font-size: 14px;
-    font-weight: 500;
-    padding: 14px 32px;
-    color: var(--GrayscaleBlack50);
-    background-color: var(--GrayscaleWhite);
+    width: 582px;
+    margin: 0 auto 86px;
+    text-align: center;
+    color: var(--GrayscaleBlack);
 }
 .home-footer
 {
@@ -557,6 +545,38 @@
 {
     width: 24px;
     margin-right: 33px;
+}
+.section-contact
+{
+    background-color: var(--PrimaryBlue100);
+    margin-bottom: 80px;
+    padding: 38px 100px;
+}
+.contact-block
+{
+    display: flex;
+    justify-content: space-between;
+}
+.contact-title
+{
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--GrayscaleWhite);
+    width: 613px;
+}
+.contact-text
+{
+    width: 432px;
+    color: var( --GrayscaleBlackLighgray);
+    margin-bottom: 20px;
+}
+.contact-btn
+{
+    font-size: 14px;
+    font-weight: 500;
+    padding: 14px 32px;
+    color: var(--GrayscaleBlack50);
+    background-color: var(--GrayscaleWhite);
 }
 
 /*# sourceMappingURL=/Dananz.e31bb0bc.css.map */

@@ -1,4 +1,5 @@
 import { getHomeFooter } from "../../components/home/homeFooter/homeFooter";
+import { getHomeContact } from "../../components/home/homeContact/homeContact";
 import "./pageFooter.css";
 
 export function getPageFooter()
@@ -10,7 +11,10 @@ export function getPageFooter()
     container.className = "container";
 
     footer.append(container);
-    container.append(getHomeFooter());
+    container.append(
+        getHomeContact(),
+        getHomeFooter(),
+    );
 
     return footer;
 }

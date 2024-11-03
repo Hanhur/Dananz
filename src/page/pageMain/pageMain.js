@@ -3,7 +3,6 @@ import { getHomeAbout } from "../../components/home/homeAbout/homeAbout";
 import { getHomeService } from "../../components/home/homeService/homeService";
 import { getHomeProduct } from "../../components/home/homeProduct/homeProduct";
 import { getHomeMaterial } from "../../components/home/homeMaterial/homeMaterial";
-import { getHomeContact } from "../../components/home/homeContact/homeContact";
 
 import "./pageMain.css";
 
@@ -18,7 +17,6 @@ export function getPageMain()
         getHomeService(),
         getHomeProduct(),
         getHomeMaterial(),
-        getHomeContact()
     );
 
     return main;
