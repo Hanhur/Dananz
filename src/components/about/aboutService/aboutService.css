@@ -1,0 +1,44 @@
+.section-aboutService
+{
+    margin-bottom: 100px;
+}
+.aboutService-block
+{
+    margin-bottom: 40px;
+    position: relative;
+}
+.aboutService_text
+{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--GrayscaleBlack);
+    margin-bottom: 20px;
+}
+.aboutService_text::after
+{
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: 100px;
+    border: 1px solid var(--GrayscaleBlack);
+    width: 465px;
+    height: 2px;
+}
+.aboutService-title
+{
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--GrayscaleBlack50);
+    margin-bottom: 25px;
+}
+.aboutService-text
+{
+    width: 470px;
+    color: var(--GrayscaleBlack10);
+}
+.aboutService-choose
+{
+    display: flex;
+    justify-content: space-between;
+    gap: 0 18px;
+}
