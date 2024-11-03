@@ -1,4 +1,5 @@
 import { getAboutMain } from "../../components/about/aboutMain/aboutMain";
+import { getAboutAchievement } from "../../components/about/aboutAchievement/aboutAchievement";
 
 import "./pageAbout.css";
 
@@ -9,6 +10,7 @@ export function getPageAboutMain()
 
     aboutMain.append(
         getAboutMain(),
+        getAboutAchievement(),
     );
 
     return aboutMain;

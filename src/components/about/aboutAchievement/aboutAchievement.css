@@ -1,0 +1,43 @@
+.section-achievement
+{
+    margin-bottom: 112px;
+    position: relative;
+}
+.achievement-block
+{
+    position: relative;
+}
+.achievement-text
+{
+    font-size: 16px;
+    font-weight: 500;
+    width: 110px;
+    text-transform: uppercase;
+    color: var(--GrayscaleBlack);
+    margin-bottom: 20px;
+}
+.achievement-text::after
+{
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: 130px;
+    border: 1px solid var(--GrayscaleBlack);
+    width: 465px;
+    height: 2px;
+}
+.achievement-title
+{
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--GrayscaleBlack);
+    width: 738px;
+    margin-bottom: 56px;
+}
+.rating-2
+{
+    content: '';
+    position: absolute;
+    top: 183px;
+    right: 75px;
+} 

@@ -452,7 +452,36 @@ function getAboutMain() {
   container.append(aboutMainBlock);
   return section;
 }
-},{"../../../img/about-main.png":"src/img/about-main.png","./aboutMain.css":"src/components/about/aboutMain/aboutMain.css"}],"src/page/pageAbout/pageAbout.css":[function(require,module,exports) {
+},{"../../../img/about-main.png":"src/img/about-main.png","./aboutMain.css":"src/components/about/aboutMain/aboutMain.css"}],"src/img/achievement.png":[function(require,module,exports) {
+module.exports = "/achievement.9e09f563.png";
+},{}],"src/components/about/aboutAchievement/aboutAchievement.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/about/aboutAchievement/aboutAchievement.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getAboutAchievement = getAboutAchievement;
+var _rating = require("../../rating/rating");
+var _achievement = _interopRequireDefault(require("../../../img/achievement.png"));
+require("./aboutAchievement.css");
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+function getAboutAchievement() {
+  var section = document.createElement("section");
+  section.className = "section-achievement";
+  var container = document.createElement("div");
+  container.className = "container";
+  var aboutAchievementBlock = document.createElement("div");
+  aboutAchievementBlock.className = "achievement-block";
+  aboutAchievementBlock.innerHTML = "\n        <p class=\"achievement-text\">ACHIEVEMENT</p>\n        <h2 class=\"achievement-title\">Interior customization with Danaanz, best quality with professional workers</h2>\n        <img class=\"achievement-img\" src=\"".concat(_achievement.default, "\">\n    ");
+  section.append(container);
+  container.append(aboutAchievementBlock, (0, _rating.getRating)());
+  return section;
+}
+},{"../../rating/rating":"src/components/rating/rating.js","../../../img/achievement.png":"src/img/achievement.png","./aboutAchievement.css":"src/components/about/aboutAchievement/aboutAchievement.css"}],"src/page/pageAbout/pageAbout.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
@@ -464,14 +493,15 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.getPageAboutMain = getPageAboutMain;
 var _aboutMain = require("../../components/about/aboutMain/aboutMain");
+var _aboutAchievement = require("../../components/about/aboutAchievement/aboutAchievement");
 require("./pageAbout.css");
 function getPageAboutMain() {
   var aboutMain = document.createElement("main");
   aboutMain.className = "about-main";
-  aboutMain.append((0, _aboutMain.getAboutMain)());
+  aboutMain.append((0, _aboutMain.getAboutMain)(), (0, _aboutAchievement.getAboutAchievement)());
   return aboutMain;
 }
-},{"../../components/about/aboutMain/aboutMain":"src/components/about/aboutMain/aboutMain.js","./pageAbout.css":"src/page/pageAbout/pageAbout.css"}],"src/img/footer-img/footer-ellipse.svg":[function(require,module,exports) {
+},{"../../components/about/aboutMain/aboutMain":"src/components/about/aboutMain/aboutMain.js","../../components/about/aboutAchievement/aboutAchievement":"src/components/about/aboutAchievement/aboutAchievement.js","./pageAbout.css":"src/page/pageAbout/pageAbout.css"}],"src/img/footer-img/footer-ellipse.svg":[function(require,module,exports) {
 module.exports = "/footer-ellipse.36ff19b7.svg";
 },{}],"src/img/footer-img/footer-vector.svg":[function(require,module,exports) {
 module.exports = "/footer-vector.eafc8784.svg";
@@ -617,7 +647,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46069" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34939" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
