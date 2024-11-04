@@ -650,6 +650,91 @@
     color: var(--GrayscaleBlack);
     margin: 0 auto 57px;
 }
+.design-block
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.design_title
+{
+    font-size: 24px;
+    font-weight: 600;
+    width: 177px;
+    color: var(--GrayscaleBlack50);
+    margin-bottom: 20px;
+}
+.design-text
+{
+    width: 334px;
+    color: var(--GrayscaleBlack10);
+}
+.consultant-block
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.consultant-title
+{
+    font-size: 24px;
+    font-weight: 600;
+    width: 177px;
+    color: var(--GrayscaleBlack50);
+    margin-bottom: 20px;
+}
+.consultant-text
+{
+    width: 334px;
+    color: var(--GrayscaleBlack10);
+}
+.construction-block
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.construction-title
+{
+    font-size: 24px;
+    font-weight: 600;
+    width: 300px;
+    color: var(--GrayscaleBlack50);
+    margin-bottom: 20px;
+}
+.construction-text
+{
+    width: 334px;
+    color: var(--GrayscaleBlack10);
+}
+.section-servAchievement
+{
+    margin-bottom: 100px;
+}
+.servAchievement-block
+{
+    position: relative;
+}
+.servAchievement-text
+{
+    font-size: 16px;
+    font-weight: 500;
+    width: 110px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+.servAchievement-text::after
+{
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: 130px;
+    border: 1px solid var(--GrayscaleBlack);
+    width: 530px;
+    height: 2px;
+}
 
 
 .home-footer
