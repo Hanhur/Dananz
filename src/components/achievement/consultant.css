@@ -1,0 +1,20 @@
+.consultant-block
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.consultant-title
+{
+    font-size: 24px;
+    font-weight: 600;
+    width: 177px;
+    color: var(--GrayscaleBlack50);
+    margin-bottom: 20px;
+}
+.consultant-text
+{
+    width: 334px;
+    color: var(--GrayscaleBlack10);
+}

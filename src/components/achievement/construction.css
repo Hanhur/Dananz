@@ -1,0 +1,19 @@
+.construction-block
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.construction-title
+{
+    font-size: 24px;
+    font-weight: 600;
+    width: 300px;
+    color: var(--GrayscaleBlack50);
+    margin-bottom: 20px;
+}
+.construction-text
+{
+    width: 334px;
+    color: var(--GrayscaleBlack10);
+}
