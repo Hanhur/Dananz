@@ -728,14 +728,15 @@ Object.defineProperty(exports, "__esModule", {
 exports.getPageServicesMain = getPageServicesMain;
 var _servicesMain = require("../../components/services/servicesMain/servicesMain");
 var _servicesAchievement = require("../../components/services/servicesAchievement/servicesAchievement");
+var _homeProduct = require("../../components/home/homeProduct/homeProduct");
 require("./pageServices.css");
 function getPageServicesMain() {
   var servicesMain = document.createElement("main");
   servicesMain.className = "services-main";
-  servicesMain.append((0, _servicesMain.getServicesMain)(), (0, _servicesAchievement.getServicesAchievement)());
+  servicesMain.append((0, _servicesMain.getServicesMain)(), (0, _servicesAchievement.getServicesAchievement)(), (0, _homeProduct.getHomeProduct)());
   return servicesMain;
 }
-},{"../../components/services/servicesMain/servicesMain":"src/components/services/servicesMain/servicesMain.js","../../components/services/servicesAchievement/servicesAchievement":"src/components/services/servicesAchievement/servicesAchievement.js","./pageServices.css":"src/page/pageServices/pageServices.css"}],"src/img/footer-img/footer-ellipse.svg":[function(require,module,exports) {
+},{"../../components/services/servicesMain/servicesMain":"src/components/services/servicesMain/servicesMain.js","../../components/services/servicesAchievement/servicesAchievement":"src/components/services/servicesAchievement/servicesAchievement.js","../../components/home/homeProduct/homeProduct":"src/components/home/homeProduct/homeProduct.js","./pageServices.css":"src/page/pageServices/pageServices.css"}],"src/img/footer-img/footer-ellipse.svg":[function(require,module,exports) {
 module.exports = "/footer-ellipse.36ff19b7.svg";
 },{}],"src/img/footer-img/footer-vector.svg":[function(require,module,exports) {
 module.exports = "/footer-vector.eafc8784.svg";
@@ -883,7 +884,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46213" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46797" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
