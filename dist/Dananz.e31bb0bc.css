@@ -631,6 +631,27 @@
     justify-content: space-between;
     gap: 0 18px;
 }
+.section-services
+{
+    margin-bottom: 112px;
+}
+.servicesMain-title
+{
+    font-size: 56px;
+    font-weight: 700;
+    color: var(--GrayscaleBlack);
+    margin-bottom: 36px;
+    text-align: center;
+}
+.servicesMain-text
+{
+    width: 518px;
+    text-align: center;
+    color: var(--GrayscaleBlack);
+    margin: 0 auto 57px;
+}
+
+
 .home-footer
 {
     display: flex;
