@@ -594,7 +594,54 @@ function getPageAboutMain() {
   aboutMain.append((0, _aboutMain.getAboutMain)(), (0, _aboutAchievement.getAboutAchievement)(), (0, _aboutService.getAboutService)());
   return aboutMain;
 }
-},{"../../components/about/aboutMain/aboutMain":"src/components/about/aboutMain/aboutMain.js","../../components/about/aboutAchievement/aboutAchievement":"src/components/about/aboutAchievement/aboutAchievement.js","../../components/about/aboutService/aboutService":"src/components/about/aboutService/aboutService.js","./pageAbout.css":"src/page/pageAbout/pageAbout.css"}],"src/img/footer-img/footer-ellipse.svg":[function(require,module,exports) {
+},{"../../components/about/aboutMain/aboutMain":"src/components/about/aboutMain/aboutMain.js","../../components/about/aboutAchievement/aboutAchievement":"src/components/about/aboutAchievement/aboutAchievement.js","../../components/about/aboutService/aboutService":"src/components/about/aboutService/aboutService.js","./pageAbout.css":"src/page/pageAbout/pageAbout.css"}],"src/img/services-main.png":[function(require,module,exports) {
+module.exports = "/services-main.694a6965.png";
+},{}],"src/components/services/servicesMain/servicesMain.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/services/servicesMain/servicesMain.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getServicesMain = getServicesMain;
+var _servicesMain = _interopRequireDefault(require("../../../img/services-main.png"));
+require("./servicesMain.css");
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+function getServicesMain() {
+  var section = document.createElement("section");
+  section.className = "section-services";
+  var container = document.createElement("div");
+  container.className = "container";
+  var servicesMainBlock = document.createElement("div");
+  servicesMainBlock.className = "servicesMain-block";
+  servicesMainBlock.innerHTML = "\n        <h1 class=\"servicesMain-title\">Services</h1>\n        <p class=\"servicesMain-text\">\n            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\n        </p>\n        <img class=\"servicesMain-img\" src=\"".concat(_servicesMain.default, "\">\n    ");
+  section.append(container);
+  container.append(servicesMainBlock);
+  return section;
+}
+},{"../../../img/services-main.png":"src/img/services-main.png","./servicesMain.css":"src/components/services/servicesMain/servicesMain.css"}],"src/page/pageServices/pageServices.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/page/pageServices/pageServices.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getPageServicesMain = getPageServicesMain;
+var _servicesMain = require("../../components/services/servicesMain/servicesMain");
+require("./pageServices.css");
+function getPageServicesMain() {
+  var servicesMain = document.createElement("main");
+  servicesMain.className = "services-main";
+  servicesMain.append((0, _servicesMain.getServicesMain)());
+  return servicesMain;
+}
+},{"../../components/services/servicesMain/servicesMain":"src/components/services/servicesMain/servicesMain.js","./pageServices.css":"src/page/pageServices/pageServices.css"}],"src/img/footer-img/footer-ellipse.svg":[function(require,module,exports) {
 module.exports = "/footer-ellipse.36ff19b7.svg";
 },{}],"src/img/footer-img/footer-vector.svg":[function(require,module,exports) {
 module.exports = "/footer-vector.eafc8784.svg";
@@ -710,12 +757,14 @@ function getPageFooter() {
 var _pageHeader = require("./src/page/pageHeader/pageHeader.js");
 var _pageMain = require("./src/page/pageMain/pageMain.js");
 var _pageAbout = require("./src/page/pageAbout/pageAbout.js");
+var _pageServices = require("./src/page/pageServices/pageServices.js");
 var _pageFooter = require("./src/page/pageFooter/pageFooter.js");
 var app = document.querySelector("#app");
 app.append((0, _pageHeader.getPageHeader)(),
 // getPageMain(),
-(0, _pageAbout.getPageAboutMain)(), (0, _pageFooter.getPageFooter)());
-},{"./src/page/pageHeader/pageHeader.js":"src/page/pageHeader/pageHeader.js","./src/page/pageMain/pageMain.js":"src/page/pageMain/pageMain.js","./src/page/pageAbout/pageAbout.js":"src/page/pageAbout/pageAbout.js","./src/page/pageFooter/pageFooter.js":"src/page/pageFooter/pageFooter.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+// getPageAboutMain(),
+(0, _pageServices.getPageServicesMain)(), (0, _pageFooter.getPageFooter)());
+},{"./src/page/pageHeader/pageHeader.js":"src/page/pageHeader/pageHeader.js","./src/page/pageMain/pageMain.js":"src/page/pageMain/pageMain.js","./src/page/pageAbout/pageAbout.js":"src/page/pageAbout/pageAbout.js","./src/page/pageServices/pageServices.js":"src/page/pageServices/pageServices.js","./src/page/pageFooter/pageFooter.js":"src/page/pageFooter/pageFooter.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -740,7 +789,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33155" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "35473" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
