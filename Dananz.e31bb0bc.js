@@ -736,7 +736,54 @@ function getPageServicesMain() {
   servicesMain.append((0, _servicesMain.getServicesMain)(), (0, _servicesAchievement.getServicesAchievement)(), (0, _homeProduct.getHomeProduct)());
   return servicesMain;
 }
-},{"../../components/services/servicesMain/servicesMain":"src/components/services/servicesMain/servicesMain.js","../../components/services/servicesAchievement/servicesAchievement":"src/components/services/servicesAchievement/servicesAchievement.js","../../components/home/homeProduct/homeProduct":"src/components/home/homeProduct/homeProduct.js","./pageServices.css":"src/page/pageServices/pageServices.css"}],"src/img/footer-img/footer-ellipse.svg":[function(require,module,exports) {
+},{"../../components/services/servicesMain/servicesMain":"src/components/services/servicesMain/servicesMain.js","../../components/services/servicesAchievement/servicesAchievement":"src/components/services/servicesAchievement/servicesAchievement.js","../../components/home/homeProduct/homeProduct":"src/components/home/homeProduct/homeProduct.js","./pageServices.css":"src/page/pageServices/pageServices.css"}],"src/img/teams.png":[function(require,module,exports) {
+module.exports = "/teams.8bcaccb6.png";
+},{}],"src/components/teams/teamsMain/teamsMain.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/teams/teamsMain/teamsMain.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getTeamsMain = getTeamsMain;
+var _teams = _interopRequireDefault(require("../../../img/teams.png"));
+require("./teamsMain.css");
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+function getTeamsMain() {
+  var section = document.createElement("section");
+  section.className = "section-teams";
+  var container = document.createElement("div");
+  container.className = "container";
+  var teamsMainBlock = document.createElement("div");
+  teamsMainBlock.className = "teams-block";
+  teamsMainBlock.innerHTML = "\n        <h1 class=\"teams-title\">Our Teams</h1>\n        <p class=\"teams-text\">\n            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\n        </p>\n        <img class=\"teams-img\" src=\"".concat(_teams.default, "\">\n    ");
+  section.append(container);
+  container.append(teamsMainBlock);
+  return section;
+}
+},{"../../../img/teams.png":"src/img/teams.png","./teamsMain.css":"src/components/teams/teamsMain/teamsMain.css"}],"src/page/pageTeams/pageTeams.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/page/pageTeams/pageTeams.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getPageTeamsMain = getPageTeamsMain;
+var _teamsMain = require("../../components/teams/teamsMain/teamsMain");
+require("./pageTeams.css");
+function getPageTeamsMain() {
+  var teamsMain = document.createElement("main");
+  teamsMain.className = "teams-main";
+  teamsMain.append((0, _teamsMain.getTeamsMain)());
+  return teamsMain;
+}
+},{"../../components/teams/teamsMain/teamsMain":"src/components/teams/teamsMain/teamsMain.js","./pageTeams.css":"src/page/pageTeams/pageTeams.css"}],"src/img/footer-img/footer-ellipse.svg":[function(require,module,exports) {
 module.exports = "/footer-ellipse.36ff19b7.svg";
 },{}],"src/img/footer-img/footer-vector.svg":[function(require,module,exports) {
 module.exports = "/footer-vector.eafc8784.svg";
@@ -853,13 +900,15 @@ var _pageHeader = require("./src/page/pageHeader/pageHeader.js");
 var _pageMain = require("./src/page/pageMain/pageMain.js");
 var _pageAbout = require("./src/page/pageAbout/pageAbout.js");
 var _pageServices = require("./src/page/pageServices/pageServices.js");
+var _pageTeams = require("./src/page/pageTeams/pageTeams.js");
 var _pageFooter = require("./src/page/pageFooter/pageFooter.js");
 var app = document.querySelector("#app");
 app.append((0, _pageHeader.getPageHeader)(),
 // getPageMain(),
 // getPageAboutMain(),
-(0, _pageServices.getPageServicesMain)(), (0, _pageFooter.getPageFooter)());
-},{"./src/page/pageHeader/pageHeader.js":"src/page/pageHeader/pageHeader.js","./src/page/pageMain/pageMain.js":"src/page/pageMain/pageMain.js","./src/page/pageAbout/pageAbout.js":"src/page/pageAbout/pageAbout.js","./src/page/pageServices/pageServices.js":"src/page/pageServices/pageServices.js","./src/page/pageFooter/pageFooter.js":"src/page/pageFooter/pageFooter.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+// getPageServicesMain(),
+(0, _pageTeams.getPageTeamsMain)(), (0, _pageFooter.getPageFooter)());
+},{"./src/page/pageHeader/pageHeader.js":"src/page/pageHeader/pageHeader.js","./src/page/pageMain/pageMain.js":"src/page/pageMain/pageMain.js","./src/page/pageAbout/pageAbout.js":"src/page/pageAbout/pageAbout.js","./src/page/pageServices/pageServices.js":"src/page/pageServices/pageServices.js","./src/page/pageTeams/pageTeams.js":"src/page/pageTeams/pageTeams.js","./src/page/pageFooter/pageFooter.js":"src/page/pageFooter/pageFooter.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -884,7 +933,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46797" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42407" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
