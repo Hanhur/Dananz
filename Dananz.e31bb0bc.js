@@ -850,14 +850,15 @@ Object.defineProperty(exports, "__esModule", {
 exports.getPageTeamsMain = getPageTeamsMain;
 var _teamsMain = require("../../components/teams/teamsMain/teamsMain");
 var _teamsDesigner = require("../../components/teams/teamsDesigner/teamsDesigner");
+var _aboutService = require("../../components/about/aboutService/aboutService");
 require("./pageTeams.css");
 function getPageTeamsMain() {
   var teamsMain = document.createElement("main");
   teamsMain.className = "teams-main";
-  teamsMain.append((0, _teamsMain.getTeamsMain)(), (0, _teamsDesigner.getTeamsDesigner)());
+  teamsMain.append((0, _teamsMain.getTeamsMain)(), (0, _teamsDesigner.getTeamsDesigner)(), (0, _aboutService.getAboutService)());
   return teamsMain;
 }
-},{"../../components/teams/teamsMain/teamsMain":"src/components/teams/teamsMain/teamsMain.js","../../components/teams/teamsDesigner/teamsDesigner":"src/components/teams/teamsDesigner/teamsDesigner.js","./pageTeams.css":"src/page/pageTeams/pageTeams.css"}],"src/img/footer-img/footer-ellipse.svg":[function(require,module,exports) {
+},{"../../components/teams/teamsMain/teamsMain":"src/components/teams/teamsMain/teamsMain.js","../../components/teams/teamsDesigner/teamsDesigner":"src/components/teams/teamsDesigner/teamsDesigner.js","../../components/about/aboutService/aboutService":"src/components/about/aboutService/aboutService.js","./pageTeams.css":"src/page/pageTeams/pageTeams.css"}],"src/img/footer-img/footer-ellipse.svg":[function(require,module,exports) {
 module.exports = "/footer-ellipse.36ff19b7.svg";
 },{}],"src/img/footer-img/footer-vector.svg":[function(require,module,exports) {
 module.exports = "/footer-vector.eafc8784.svg";
@@ -1007,7 +1008,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39327" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37877" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
