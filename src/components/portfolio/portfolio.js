@@ -1,5 +1,6 @@
 import { getMinimalist } from "./minimalist/minimalist";
 import { getVintage } from "./vintage/vintage";
+import { getModern } from "./modern/modern";
 import portfolioPng from "../../img/portfolio/portfolio.png";
 import "./portfolio.css";
 
@@ -26,6 +27,7 @@ export function getPortfolio()
         portfolioBlock,
         getMinimalist(),
         getVintage(),
+        getModern(),
     );
 
     return section;
