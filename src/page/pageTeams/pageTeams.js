@@ -1,5 +1,6 @@
 import { getTeamsMain } from "../../components/teams/teamsMain/teamsMain";
 import { getTeamsDesigner } from "../../components/teams/teamsDesigner/teamsDesigner";
+import { getAboutService } from '../../components/about/aboutService/aboutService';
 import "./pageTeams.css";
 
 export function getPageTeamsMain()
@@ -9,7 +10,8 @@ export function getPageTeamsMain()
 
     teamsMain.append(
         getTeamsMain(),
-        getTeamsDesigner()
+        getTeamsDesigner(),
+        getAboutService()
     );
 
     return teamsMain;
