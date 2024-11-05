@@ -1,5 +1,5 @@
 import { getContact } from "../../components/contact/contact";
-
+import { getLocation } from "../../components/location/location";
 import "./pageContact.css";
 
 export function getPageContact()
@@ -9,6 +9,7 @@ export function getPageContact()
 
     contactMain.append(
         getContact(),
+        getLocation()
     );
 
     return contactMain;
