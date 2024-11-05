@@ -11,7 +11,7 @@ export function getHomeMain()
     container.className = "container";
 
     const designBlock = document.createElement("div");
-    designBlock.className = "design-block";
+    designBlock.className = "design_block";
     designBlock.innerHTML = `
         <div class="desing-box">
             <h1 class="design-title">Design your interor with high quality.</h1>

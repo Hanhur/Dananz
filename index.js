@@ -13,12 +13,12 @@ import { getPageFooter } from "./src/page/pageFooter/pageFooter.js";
 
 app.append(
     getPageHeader(),
-    // getPageMain(),
-    // getPageAboutMain(),
-    // getPageServicesMain(),
-    // getPageTeamsMain(),
-    // getPageContact(),
-    // getPagePortfolio(),
+    getPageMain(),
+    getPageAboutMain(),
+    getPageServicesMain(),
+    getPageTeamsMain(),
+    getPageContact(),
+    getPagePortfolio(),
     getPagePortofolios(),
     getPageFooter()
 );

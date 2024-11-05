@@ -3,7 +3,7 @@ import "./rating.css";
 export function getRating()
 {
     const rating = document.createElement("div");
-    rating.classList.add("rating-1", "rating-2");
+    rating.className = "rating-1";
     rating.innerHTML = `
         <div class="rating-block">
             <span class="rating-span">350+</span>
