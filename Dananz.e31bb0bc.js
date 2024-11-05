@@ -858,7 +858,50 @@ function getPageTeamsMain() {
   teamsMain.append((0, _teamsMain.getTeamsMain)(), (0, _teamsDesigner.getTeamsDesigner)(), (0, _aboutService.getAboutService)());
   return teamsMain;
 }
-},{"../../components/teams/teamsMain/teamsMain":"src/components/teams/teamsMain/teamsMain.js","../../components/teams/teamsDesigner/teamsDesigner":"src/components/teams/teamsDesigner/teamsDesigner.js","../../components/about/aboutService/aboutService":"src/components/about/aboutService/aboutService.js","./pageTeams.css":"src/page/pageTeams/pageTeams.css"}],"src/img/footer-img/footer-ellipse.svg":[function(require,module,exports) {
+},{"../../components/teams/teamsMain/teamsMain":"src/components/teams/teamsMain/teamsMain.js","../../components/teams/teamsDesigner/teamsDesigner":"src/components/teams/teamsDesigner/teamsDesigner.js","../../components/about/aboutService/aboutService":"src/components/about/aboutService/aboutService.js","./pageTeams.css":"src/page/pageTeams/pageTeams.css"}],"src/components/contact/contact.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/contact/contact.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getContact = getContact;
+require("./contact.css");
+function getContact() {
+  var section = document.createElement("section");
+  section.className = "section_contact";
+  var container = document.createElement("div");
+  container.className = "container";
+  var contactBlock = document.createElement("div");
+  contactBlock.className = "contact_block";
+  contactBlock.innerHTML = "\n        <h1 class=\"contact_title\">Contact Us</h1>\n        <p class=\"contact_text\">\n            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\n        </p>\n        <form class=\"contact-form\">\n            <div class=\"contact-box-label\">\n                <div class=\"contact-box_label\">\n                    <label class=\"contact-label\">First Name</label>\n                    <input class=\"contact_input\" type=\"text\" placeholder=\"First Name\">\n                </div>\n               <div class=\"contact-box_label\">\n                    <label class=\"contact-label\">Last Name</label>\n                    <input class=\"contact_input\" type=\"text\" placeholder=\"Last Name\">\n               </div>\n            </div>\n            <label class=\"contact-label\">Email</label>\n            <input class=\"contact-input\" type=\"text\" placeholder=\"Email\">\n            <label class=\"contact-label\">Phone Number</label>\n            <input class=\"contact-input\" type=\"text\" placeholder=\"First Name\">\n            <label class=\"contact-label\">Message</label>\n            <textarea class=\"contact-textarea\" placeholder=\"Your Message\"></textarea>\n        </form>\n        <button class=\"contact_btn\">Send Massage</button>\n    ";
+  section.append(container);
+  container.append(contactBlock);
+  return section;
+}
+},{"./contact.css":"src/components/contact/contact.css"}],"src/page/pageContact/pageContact.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/page/pageContact/pageContact.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getPageContact = getPageContact;
+var _contact = require("../../components/contact/contact");
+require("./pageContact.css");
+function getPageContact() {
+  var contactMain = document.createElement("main");
+  contactMain.className = "contact-main";
+  contactMain.append((0, _contact.getContact)());
+  return contactMain;
+}
+},{"../../components/contact/contact":"src/components/contact/contact.js","./pageContact.css":"src/page/pageContact/pageContact.css"}],"src/img/footer-img/footer-ellipse.svg":[function(require,module,exports) {
 module.exports = "/footer-ellipse.36ff19b7.svg";
 },{}],"src/img/footer-img/footer-vector.svg":[function(require,module,exports) {
 module.exports = "/footer-vector.eafc8784.svg";
@@ -976,14 +1019,16 @@ var _pageMain = require("./src/page/pageMain/pageMain.js");
 var _pageAbout = require("./src/page/pageAbout/pageAbout.js");
 var _pageServices = require("./src/page/pageServices/pageServices.js");
 var _pageTeams = require("./src/page/pageTeams/pageTeams.js");
+var _pageContact = require("./src/page/pageContact/pageContact.js");
 var _pageFooter = require("./src/page/pageFooter/pageFooter.js");
 var app = document.querySelector("#app");
 app.append((0, _pageHeader.getPageHeader)(),
 // getPageMain(),
 // getPageAboutMain(),
 // getPageServicesMain(),
-(0, _pageTeams.getPageTeamsMain)(), (0, _pageFooter.getPageFooter)());
-},{"./src/page/pageHeader/pageHeader.js":"src/page/pageHeader/pageHeader.js","./src/page/pageMain/pageMain.js":"src/page/pageMain/pageMain.js","./src/page/pageAbout/pageAbout.js":"src/page/pageAbout/pageAbout.js","./src/page/pageServices/pageServices.js":"src/page/pageServices/pageServices.js","./src/page/pageTeams/pageTeams.js":"src/page/pageTeams/pageTeams.js","./src/page/pageFooter/pageFooter.js":"src/page/pageFooter/pageFooter.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+// getPageTeamsMain(),
+(0, _pageContact.getPageContact)(), (0, _pageFooter.getPageFooter)());
+},{"./src/page/pageHeader/pageHeader.js":"src/page/pageHeader/pageHeader.js","./src/page/pageMain/pageMain.js":"src/page/pageMain/pageMain.js","./src/page/pageAbout/pageAbout.js":"src/page/pageAbout/pageAbout.js","./src/page/pageServices/pageServices.js":"src/page/pageServices/pageServices.js","./src/page/pageTeams/pageTeams.js":"src/page/pageTeams/pageTeams.js","./src/page/pageContact/pageContact.js":"src/page/pageContact/pageContact.js","./src/page/pageFooter/pageFooter.js":"src/page/pageFooter/pageFooter.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -1008,7 +1053,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37877" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41017" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
