@@ -949,7 +949,30 @@ function getMinimalist() {
   minimalistBlock.innerHTML = "\n        <p class=\"portfolio_text\">PORTFOLIO</p>\n        <div class=\"minimalist-box\">\n            <img class=\"minimalist-img\" src=\"".concat(_minimalist.default, "\">\n            <div class=\"minimalist_box\">\n                <h2 class=\"minimalist-title\">Minimalist Room</h2>\n                <p class=\"minimalist-text\">\n                    Online learning with us does not interfere with your daily life, \n                    because learning can be done anytime and anywhere.\n                </p>\n                <button class=\"minimalist-btn\">See More</button>\n            </div>\n        </div>\n        <div class=\"block minimalist\">\n            <img class=\"block-img\" src=\"").concat(_aboutEllipse.default, "\" alt=\"\">\n            <div class=\"blocks\">\n                <h3 class=\"blocks-title\">Arga Danaan</h3>\n                <p class=\"blocks-text\">CEO of Dananz</p>\n            </div>\n        </div>\n    ");
   return minimalistBlock;
 }
-},{"../../../img/portfolio/minimalist.png":"src/img/portfolio/minimalist.png","../../../img/about-ellipse.png":"src/img/about-ellipse.png","./minimalist.css":"src/components/portfolio/minimalist/minimalist.css"}],"src/img/portfolio/portfolio.png":[function(require,module,exports) {
+},{"../../../img/portfolio/minimalist.png":"src/img/portfolio/minimalist.png","../../../img/about-ellipse.png":"src/img/about-ellipse.png","./minimalist.css":"src/components/portfolio/minimalist/minimalist.css"}],"src/img/portfolio/vintage.png":[function(require,module,exports) {
+module.exports = "/vintage.0892e666.png";
+},{}],"src/components/portfolio/vintage/vintage.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/portfolio/vintage/vintage.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getVintage = getVintage;
+var _vintage = _interopRequireDefault(require("../../../img/portfolio/vintage.png"));
+var _aboutEllipse = _interopRequireDefault(require("../../../img/about-ellipse.png"));
+require("./vintage.css");
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+function getVintage() {
+  var vintageBlock = document.createElement("div");
+  vintageBlock.className = "vintage-block";
+  vintageBlock.innerHTML = "\n        <div class=\"vintage-box\">\n            <div class=\"vintage_box\">\n                <h2 class=\"vintage-title\">Vintage Room</h2>\n                <p class=\"vintage-text\">\n                    Online learning with us does not interfere with your daily life, \n                    because learning can be done anytime and anywhere.\n                </p>\n                <button class=\"vintage-btn\">See More</button>\n            </div>\n            <img class=\"vintage-img\" src=\"".concat(_vintage.default, "\">\n        </div>\n        <div class=\"block vintage\">\n            <img class=\"block-img\" src=\"").concat(_aboutEllipse.default, "\" alt=\"\">\n            <div class=\"blocks\">\n                <h3 class=\"blocks-title\">Arga Danaan</h3>\n                <p class=\"blocks-text\">CEO of Dananz</p>\n            </div>\n        </div>\n    ");
+  return vintageBlock;
+}
+},{"../../../img/portfolio/vintage.png":"src/img/portfolio/vintage.png","../../../img/about-ellipse.png":"src/img/about-ellipse.png","./vintage.css":"src/components/portfolio/vintage/vintage.css"}],"src/img/portfolio/portfolio.png":[function(require,module,exports) {
 module.exports = "/portfolio.dc3522f7.png";
 },{}],"src/components/portfolio/portfolio.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
@@ -963,6 +986,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.getPortfolio = getPortfolio;
 var _minimalist = require("./minimalist/minimalist");
+var _vintage = require("./vintage/vintage");
 var _portfolio = _interopRequireDefault(require("../../img/portfolio/portfolio.png"));
 require("./portfolio.css");
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
@@ -975,10 +999,10 @@ function getPortfolio() {
   portfolioBlock.className = "portfolio-block";
   portfolioBlock.innerHTML = "\n        <h1 class=\"portfolio-title\">Portofolio</h1>\n        <p class=\"portfolio-text\">\n            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\n        </p>\n        <img class=\"portfolio-img\" src=\"".concat(_portfolio.default, "\">\n    ");
   section.append(container);
-  container.append(portfolioBlock, (0, _minimalist.getMinimalist)());
+  container.append(portfolioBlock, (0, _minimalist.getMinimalist)(), (0, _vintage.getVintage)());
   return section;
 }
-},{"./minimalist/minimalist":"src/components/portfolio/minimalist/minimalist.js","../../img/portfolio/portfolio.png":"src/img/portfolio/portfolio.png","./portfolio.css":"src/components/portfolio/portfolio.css"}],"src/page/pagePortfolio/pagePortfolio.css":[function(require,module,exports) {
+},{"./minimalist/minimalist":"src/components/portfolio/minimalist/minimalist.js","./vintage/vintage":"src/components/portfolio/vintage/vintage.js","../../img/portfolio/portfolio.png":"src/img/portfolio/portfolio.png","./portfolio.css":"src/components/portfolio/portfolio.css"}],"src/page/pagePortfolio/pagePortfolio.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
@@ -1151,7 +1175,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45197" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38419" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
