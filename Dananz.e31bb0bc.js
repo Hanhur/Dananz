@@ -882,7 +882,31 @@ function getContact() {
   container.append(contactBlock);
   return section;
 }
-},{"./contact.css":"src/components/contact/contact.css"}],"src/page/pageContact/pageContact.css":[function(require,module,exports) {
+},{"./contact.css":"src/components/contact/contact.css"}],"src/components/location/location.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/location/location.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getLocation = getLocation;
+require("./location.css");
+function getLocation() {
+  var section = document.createElement("section");
+  section.className = "section_location";
+  var container = document.createElement("div");
+  container.className = "container";
+  var locationBlock = document.createElement("div");
+  locationBlock.className = "location-block";
+  locationBlock.innerHTML = "\n        <p class=\"location-text\">LOCATION</p>\n        <div class=\"location_block\">\n            <div class=\"location-stores\">\n                <h2 class=\"location-title\">Visit Our Stores</h2>\n                <p class=\"location_text\">Find us at these locations.</p>\n                <address class=\"location-address\">\n                    <h3 class=\"location-address-title\">Email</h3>\n                    <a class=\"location-address-link\" href=\"mailto:dananz@gmail.com\">dananz@gmail.com</a>\n                    <h3 class=\"location-address-title phone\">Phone</h3>\n                    <a class=\"location-address-link\" href=\"tel:+628150021000\">+62 815 002 1000</a>\n                </address>\n            </div>\n            <div class=\"location-box\">\n                <div class=\"location-boxs\">\n                    <h4 class=\"location-boxs-title\">Jakarta</h4>\n                    <p class=\"location-boxs-text\">\n                        Customize your interior design into a dream place with the best designers and quality furniture. \n                        We try our best to fulfill your expectations.\n                    </p>\n                </div>\n                <div class=\"location-boxs\">\n                    <h4 class=\"location-boxs-title\">Surakarta</h4>\n                    <p class=\"location-boxs-text\">\n                        Customize your interior design into a dream place with the best designers and quality furniture. \n                        We try our best to fulfill your expectations.\n                    </p>\n                </div>\n                <div class=\"location-boxs\">\n                    <h4 class=\"location-boxs-title\">Yogyakarta</h4>\n                    <p class=\"location-boxs-text\">\n                        Customize your interior design into a dream place with the best designers and quality furniture. \n                        We try our best to fulfill your expectations.\n                    </p>\n                </div>\n                <div class=\"location-boxs\">\n                    <h4 class=\"location-boxs-title\">Bandung</h4>\n                    <p class=\"location-boxs-text\">\n                        Customize your interior design into a dream place with the best designers and quality furniture. \n                        We try our best to fulfill your expectations.\n                    </p>\n                </div>\n            </div>\n        </div>\n    ";
+  section.append(container);
+  container.append(locationBlock);
+  return section;
+}
+},{"./location.css":"src/components/location/location.css"}],"src/page/pageContact/pageContact.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
@@ -894,14 +918,15 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.getPageContact = getPageContact;
 var _contact = require("../../components/contact/contact");
+var _location = require("../../components/location/location");
 require("./pageContact.css");
 function getPageContact() {
   var contactMain = document.createElement("main");
   contactMain.className = "contact-main";
-  contactMain.append((0, _contact.getContact)());
+  contactMain.append((0, _contact.getContact)(), (0, _location.getLocation)());
   return contactMain;
 }
-},{"../../components/contact/contact":"src/components/contact/contact.js","./pageContact.css":"src/page/pageContact/pageContact.css"}],"src/img/footer-img/footer-ellipse.svg":[function(require,module,exports) {
+},{"../../components/contact/contact":"src/components/contact/contact.js","../../components/location/location":"src/components/location/location.js","./pageContact.css":"src/page/pageContact/pageContact.css"}],"src/img/footer-img/footer-ellipse.svg":[function(require,module,exports) {
 module.exports = "/footer-ellipse.36ff19b7.svg";
 },{}],"src/img/footer-img/footer-vector.svg":[function(require,module,exports) {
 module.exports = "/footer-vector.eafc8784.svg";
@@ -1053,7 +1078,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33093" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42027" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
