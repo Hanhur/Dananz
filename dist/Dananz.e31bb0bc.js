@@ -764,7 +764,80 @@ function getTeamsMain() {
   container.append(teamsMainBlock);
   return section;
 }
-},{"../../../img/teams.png":"src/img/teams.png","./teamsMain.css":"src/components/teams/teamsMain/teamsMain.css"}],"src/page/pageTeams/pageTeams.css":[function(require,module,exports) {
+},{"../../../img/teams.png":"src/img/teams.png","./teamsMain.css":"src/components/teams/teamsMain/teamsMain.css"}],"src/img/person/image1.png":[function(require,module,exports) {
+module.exports = "/image1.e11e8811.png";
+},{}],"src/img/person/image2.png":[function(require,module,exports) {
+module.exports = "/image2.b68d0790.png";
+},{}],"src/img/person/image3.png":[function(require,module,exports) {
+module.exports = "/image3.bfcdb678.png";
+},{}],"src/img/person/image4.png":[function(require,module,exports) {
+module.exports = "/image4.7ced7ccf.png";
+},{}],"src/img/person/image5.png":[function(require,module,exports) {
+module.exports = "/image5.ece9df93.png";
+},{}],"src/img/person/image6.png":[function(require,module,exports) {
+module.exports = "/image6.a0f7b6ed.png";
+},{}],"src/img/person/image7.png":[function(require,module,exports) {
+module.exports = "/image7.ef1f3b63.png";
+},{}],"src/img/person/image8.png":[function(require,module,exports) {
+module.exports = "/image8.7ccbb81a.png";
+},{}],"src/components/person/person.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/person/person.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getPerson = getPerson;
+var _image = _interopRequireDefault(require("../../img/person/image1.png"));
+var _image2 = _interopRequireDefault(require("../../img/person/image2.png"));
+var _image3 = _interopRequireDefault(require("../../img/person/image3.png"));
+var _image4 = _interopRequireDefault(require("../../img/person/image4.png"));
+var _image5 = _interopRequireDefault(require("../../img/person/image5.png"));
+var _image6 = _interopRequireDefault(require("../../img/person/image6.png"));
+var _image7 = _interopRequireDefault(require("../../img/person/image7.png"));
+var _image8 = _interopRequireDefault(require("../../img/person/image8.png"));
+require("./person.css");
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+var personArray = [_image.default, _image2.default, _image3.default, _image4.default, _image5.default, _image6.default, _image7.default, _image8.default];
+function getPerson() {
+  var personBlock = document.createElement("div");
+  personBlock.className = "person-block";
+  var listItems = personArray.map(function (imageSrc) {
+    return "\n       <ul class=\"person-list\">\n            <li class=\"person-item\">\n                <img class=\"person-img\" src=\"".concat(imageSrc, "\" alt=\"Person Image\">\n                <div class=\"person-box\">\n                    <h2 class=\"person-title\">Shoo Phar Dhie</h2>\n                    <p class=\"person-text\">CEO</p>\n                </div>\n            </li>\n       </ul>\n    ");
+  }).join("");
+  personBlock.innerHTML = listItems;
+  return personBlock;
+}
+},{"../../img/person/image1.png":"src/img/person/image1.png","../../img/person/image2.png":"src/img/person/image2.png","../../img/person/image3.png":"src/img/person/image3.png","../../img/person/image4.png":"src/img/person/image4.png","../../img/person/image5.png":"src/img/person/image5.png","../../img/person/image6.png":"src/img/person/image6.png","../../img/person/image7.png":"src/img/person/image7.png","../../img/person/image8.png":"src/img/person/image8.png","./person.css":"src/components/person/person.css"}],"src/components/teams/teamsDesigner/teamsDesigner.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/teams/teamsDesigner/teamsDesigner.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getTeamsDesigner = getTeamsDesigner;
+var _person = require("../../person/person");
+require("./teamsDesigner.css");
+function getTeamsDesigner() {
+  var section = document.createElement("section");
+  section.className = "section-designer";
+  var container = document.createElement("div");
+  container.className = "container";
+  var teamsDesignerBlock = document.createElement("div");
+  teamsDesignerBlock.className = "designer_block";
+  teamsDesignerBlock.innerHTML = "\n        <p class=\"designer_text\">DESIGNER</p>\n        <h2 class=\"designer_title\">Creative Person</h2>\n        <p class=\"designer__text\">\n            Customize your interior design into a dream place with the best designers and quality furniture. \n            We try our best to fulfill your expectations.\n        </p>\n    ";
+  section.append(container);
+  container.append(teamsDesignerBlock);
+  teamsDesignerBlock.append((0, _person.getPerson)());
+  return section;
+}
+},{"../../person/person":"src/components/person/person.js","./teamsDesigner.css":"src/components/teams/teamsDesigner/teamsDesigner.css"}],"src/page/pageTeams/pageTeams.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
@@ -776,14 +849,15 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.getPageTeamsMain = getPageTeamsMain;
 var _teamsMain = require("../../components/teams/teamsMain/teamsMain");
+var _teamsDesigner = require("../../components/teams/teamsDesigner/teamsDesigner");
 require("./pageTeams.css");
 function getPageTeamsMain() {
   var teamsMain = document.createElement("main");
   teamsMain.className = "teams-main";
-  teamsMain.append((0, _teamsMain.getTeamsMain)());
+  teamsMain.append((0, _teamsMain.getTeamsMain)(), (0, _teamsDesigner.getTeamsDesigner)());
   return teamsMain;
 }
-},{"../../components/teams/teamsMain/teamsMain":"src/components/teams/teamsMain/teamsMain.js","./pageTeams.css":"src/page/pageTeams/pageTeams.css"}],"src/img/footer-img/footer-ellipse.svg":[function(require,module,exports) {
+},{"../../components/teams/teamsMain/teamsMain":"src/components/teams/teamsMain/teamsMain.js","../../components/teams/teamsDesigner/teamsDesigner":"src/components/teams/teamsDesigner/teamsDesigner.js","./pageTeams.css":"src/page/pageTeams/pageTeams.css"}],"src/img/footer-img/footer-ellipse.svg":[function(require,module,exports) {
 module.exports = "/footer-ellipse.36ff19b7.svg";
 },{}],"src/img/footer-img/footer-vector.svg":[function(require,module,exports) {
 module.exports = "/footer-vector.eafc8784.svg";
@@ -933,7 +1007,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42407" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39327" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

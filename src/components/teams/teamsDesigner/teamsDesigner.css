@@ -1,0 +1,41 @@
+.section-designer
+{
+    margin-bottom: 112px;
+}
+.designer_block
+{
+    position: relative;
+}
+.designer_text
+{
+    font-size: 16px;
+    font-weight: 500;
+    width: 72px;
+    margin-bottom: 20px;
+    color: var(--GrayscaleBlack);
+    text-transform: uppercase;
+}
+.designer_text::after
+{
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: 100px;
+    border: 1px solid var(--GrayscaleBlack);
+    width: 465px;
+    height: 2px;
+}
+.designer_title
+{
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--GrayscaleBlack50);
+    width: 291px;
+    margin-bottom: 24px;
+}
+.designer__text
+{
+    width: 471px;
+    color: var(--GrayscaleBlack10);
+    margin-bottom: 80px;
+}

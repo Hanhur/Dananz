@@ -1,4 +1,5 @@
 import { getTeamsMain } from "../../components/teams/teamsMain/teamsMain";
+import { getTeamsDesigner } from "../../components/teams/teamsDesigner/teamsDesigner";
 import "./pageTeams.css";
 
 export function getPageTeamsMain()
@@ -7,7 +8,8 @@ export function getPageTeamsMain()
     teamsMain.className = "teams-main";
 
     teamsMain.append(
-        getTeamsMain()
+        getTeamsMain(),
+        getTeamsDesigner()
     );
 
     return teamsMain;
