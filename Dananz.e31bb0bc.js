@@ -1070,7 +1070,69 @@ function getPagePortfolio() {
   portfolioMain.append((0, _portfolio.getPortfolio)(), (0, _aboutService.getAboutService)());
   return portfolioMain;
 }
-},{"../../components/portfolio/portfolio":"src/components/portfolio/portfolio.js","../../components/about/aboutService/aboutService":"src/components/about/aboutService/aboutService.js","./pagePortfolio.css":"src/page/pagePortfolio/pagePortfolio.css"}],"src/img/footer-img/footer-ellipse.svg":[function(require,module,exports) {
+},{"../../components/portfolio/portfolio":"src/components/portfolio/portfolio.js","../../components/about/aboutService/aboutService":"src/components/about/aboutService/aboutService.js","./pagePortfolio.css":"src/page/pagePortfolio/pagePortfolio.css"}],"src/img/portofolios/portofolios1.png":[function(require,module,exports) {
+module.exports = "/portofolios1.f2858a29.png";
+},{}],"src/img/portofolios/portofolios2.png":[function(require,module,exports) {
+module.exports = "/portofolios2.7c78036d.png";
+},{}],"src/img/portofolios/portofolios3.png":[function(require,module,exports) {
+module.exports = "/portofolios3.f139be83.png";
+},{}],"src/img/portofolios/portofolios4.png":[function(require,module,exports) {
+module.exports = "/portofolios4.5a839886.png";
+},{}],"src/img/portofolios/portofolios5.png":[function(require,module,exports) {
+module.exports = "/portofolios5.c6b8a452.png";
+},{}],"src/img/portofolios/portofolios6.png":[function(require,module,exports) {
+module.exports = "/portofolios6.bc62a0e8.png";
+},{}],"src/components/portofolios/portofolios.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/portofolios/portofolios.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getPortofolios = getPortofolios;
+var _portofolios = _interopRequireDefault(require("../../img/portofolios/portofolios1.png"));
+var _portofolios2 = _interopRequireDefault(require("../../img/portofolios/portofolios2.png"));
+var _portofolios3 = _interopRequireDefault(require("../../img/portofolios/portofolios3.png"));
+var _portofolios4 = _interopRequireDefault(require("../../img/portofolios/portofolios4.png"));
+var _portofolios5 = _interopRequireDefault(require("../../img/portofolios/portofolios5.png"));
+var _portofolios6 = _interopRequireDefault(require("../../img/portofolios/portofolios6.png"));
+require("./portofolios.css");
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+function getPortofolios() {
+  var section = document.createElement("section");
+  section.className = "section-portofolios";
+  var container = document.createElement("div");
+  container.className = "container";
+  var portofoliosBlock = document.createElement("div");
+  portofoliosBlock.className = "portofolios-block";
+  portofoliosBlock.innerHTML = "\n        <h1 class=\"portofolios-title\">Minimalist Room</h1>\n        <p class=\"portofolios-text\">\n            It is a long established fact that a reader will be distracted by the \n            readable content of a page when looking at its layout.\n        </p>\n        <img class=\"portofolios-img\" src=\"".concat(_portofolios.default, "\">\n        <div class=\"portofolios-box\">\n            <div class=\"portofolios_box\">\n                <h2 class=\"portofolios_title\">Project Overview</h2>\n                <p class=\"portofolios_text text\">\n                    Online learning with us does not interfere with your daily life. because learning can be done anytime and anywhere. Online learning with us does not interfere with your daily life. because learning can be done anytime and anywhere. Online learning with us does not interfere with your daily life. because learning can be done anytime and anywhere. \n                </p>\n                <span class=\"portofolios-span\">\n                    <p class=\"portofolios-span-text\">July 22 - 2022</p>\n                    <p class=\"portofolios-span_text\">Interior Design - Furnitur</p>\n                </span>\n            </div>\n            <div class=\"portofolios_box\">\n                <h2 class=\"portofolios_title\">Design Process</h2>\n                <p class=\"portofolios_text _text\">\n                    Online learning with us does not interfere with your daily life. because learning can be done anytime and anywhere. Online learning with us does not interfere with your daily life. because learning can be done anytime and anywhere. Online learning with us does not interfere with your daily life. because learning can be done anytime and anywhere. \n                </p>\n                <p class=\"portofolios_text\">\n                    Online learning with us does not interfere with your daily life. because learning can be done anytime and anywhere. Online learning with us does not interfere with your daily life. because learning can be done anytime and anywhere.\n                </p>\n            </div>\n        </div>\n        <div class=\"portofolios_box-img\">\n            <img class=\"portofolios-images\" src=\"").concat(_portofolios2.default, "\">\n            <img class=\"portofolios-images\" src=\"").concat(_portofolios3.default, "\">\n        </div>\n        <img class=\"portofolios_images\" src=\"").concat(_portofolios4.default, "\">\n        <div class=\"portofolios_box-img\">\n            <img class=\"portofolios-images\" src=\"").concat(_portofolios5.default, "\">\n            <img class=\"portofolios-images\" src=\"").concat(_portofolios6.default, "\">\n        </div>\n    ");
+  section.append(container);
+  container.append(portofoliosBlock);
+  return section;
+}
+},{"../../img/portofolios/portofolios1.png":"src/img/portofolios/portofolios1.png","../../img/portofolios/portofolios2.png":"src/img/portofolios/portofolios2.png","../../img/portofolios/portofolios3.png":"src/img/portofolios/portofolios3.png","../../img/portofolios/portofolios4.png":"src/img/portofolios/portofolios4.png","../../img/portofolios/portofolios5.png":"src/img/portofolios/portofolios5.png","../../img/portofolios/portofolios6.png":"src/img/portofolios/portofolios6.png","./portofolios.css":"src/components/portofolios/portofolios.css"}],"src/page/pagePortofolios/pagePortofolios.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/page/pagePortofolios/pagePortofolios.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getPagePortofolios = getPagePortofolios;
+var _portofolios = require("../../components/portofolios/portofolios");
+require("./pagePortofolios.css");
+function getPagePortofolios() {
+  var portofoliosMain = document.createElement("main");
+  portofoliosMain.className = "portofolios-main";
+  portofoliosMain.append((0, _portofolios.getPortofolios)());
+  return portofoliosMain;
+}
+},{"../../components/portofolios/portofolios":"src/components/portofolios/portofolios.js","./pagePortofolios.css":"src/page/pagePortofolios/pagePortofolios.css"}],"src/img/footer-img/footer-ellipse.svg":[function(require,module,exports) {
 module.exports = "/footer-ellipse.36ff19b7.svg";
 },{}],"src/img/footer-img/footer-vector.svg":[function(require,module,exports) {
 module.exports = "/footer-vector.eafc8784.svg";
@@ -1190,6 +1252,7 @@ var _pageServices = require("./src/page/pageServices/pageServices.js");
 var _pageTeams = require("./src/page/pageTeams/pageTeams.js");
 var _pageContact = require("./src/page/pageContact/pageContact.js");
 var _pagePortfolio = require("./src/page/pagePortfolio/pagePortfolio.js");
+var _pagePortofolios = require("./src/page/pagePortofolios/pagePortofolios.js");
 var _pageFooter = require("./src/page/pageFooter/pageFooter.js");
 var app = document.querySelector("#app");
 app.append((0, _pageHeader.getPageHeader)(),
@@ -1198,8 +1261,9 @@ app.append((0, _pageHeader.getPageHeader)(),
 // getPageServicesMain(),
 // getPageTeamsMain(),
 // getPageContact(),
-(0, _pagePortfolio.getPagePortfolio)(), (0, _pageFooter.getPageFooter)());
-},{"./src/page/pageHeader/pageHeader.js":"src/page/pageHeader/pageHeader.js","./src/page/pageMain/pageMain.js":"src/page/pageMain/pageMain.js","./src/page/pageAbout/pageAbout.js":"src/page/pageAbout/pageAbout.js","./src/page/pageServices/pageServices.js":"src/page/pageServices/pageServices.js","./src/page/pageTeams/pageTeams.js":"src/page/pageTeams/pageTeams.js","./src/page/pageContact/pageContact.js":"src/page/pageContact/pageContact.js","./src/page/pagePortfolio/pagePortfolio.js":"src/page/pagePortfolio/pagePortfolio.js","./src/page/pageFooter/pageFooter.js":"src/page/pageFooter/pageFooter.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+// getPagePortfolio(),
+(0, _pagePortofolios.getPagePortofolios)(), (0, _pageFooter.getPageFooter)());
+},{"./src/page/pageHeader/pageHeader.js":"src/page/pageHeader/pageHeader.js","./src/page/pageMain/pageMain.js":"src/page/pageMain/pageMain.js","./src/page/pageAbout/pageAbout.js":"src/page/pageAbout/pageAbout.js","./src/page/pageServices/pageServices.js":"src/page/pageServices/pageServices.js","./src/page/pageTeams/pageTeams.js":"src/page/pageTeams/pageTeams.js","./src/page/pageContact/pageContact.js":"src/page/pageContact/pageContact.js","./src/page/pagePortfolio/pagePortfolio.js":"src/page/pagePortfolio/pagePortfolio.js","./src/page/pagePortofolios/pagePortofolios.js":"src/page/pagePortofolios/pagePortofolios.js","./src/page/pageFooter/pageFooter.js":"src/page/pageFooter/pageFooter.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -1224,7 +1288,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38927" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38977" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
