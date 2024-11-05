@@ -1167,6 +1167,51 @@
     top: 30px;
     right: 120px;
 }
+.transitional-block
+{
+    position: relative;
+}
+.transitional-box
+{
+    display: flex;
+    gap: 0 95px;
+}
+.transitional_box
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.transitional-title
+{
+    font-size: 24px;
+    font-weight: 600;
+    width: 225px;
+    color: var(--GrayscaleBlack50);
+    margin-bottom: 20px;
+}
+.transitional-text
+{
+    width: 223px;
+    color: var(--GrayscaleBlack10);
+    margin-bottom: 40px;
+}
+.transitional-btn
+{
+    font-size: 14px;
+    font-weight: 500;
+    padding: 14px 32px;
+    width: 130px;
+    color: var(--GrayscaleWhite);
+    background-color: var(--PrimaryBlue100);
+}
+.transitional
+{
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 120px;
+}
 .section-portfolio
 {
     margin-bottom: 132px;

@@ -995,7 +995,30 @@ function getModern() {
   modernBlock.innerHTML = "\n        <div class=\"modern-box\">\n            <img class=\"modern-img\" src=\"".concat(_modern.default, "\">\n            <div class=\"modern_box\">\n                <h2 class=\"modern-title\">Modern Room</h2>\n                <p class=\"modern-text\">\n                    Online learning with us does not interfere with your daily life, \n                    because learning can be done anytime and anywhere.\n                </p>\n                <button class=\"modern-btn\">See More</button>\n            </div>\n        </div>\n        <div class=\"block modern\">\n            <img class=\"block-img\" src=\"").concat(_aboutEllipse.default, "\" alt=\"\">\n            <div class=\"blocks\">\n                <h3 class=\"blocks-title\">Arga Danaan</h3>\n                <p class=\"blocks-text\">CEO of Dananz</p>\n            </div>\n        </div>\n    ");
   return modernBlock;
 }
-},{"../../../img/portfolio/modern.png":"src/img/portfolio/modern.png","../../../img/about-ellipse.png":"src/img/about-ellipse.png","./modern.css":"src/components/portfolio/modern/modern.css"}],"src/img/portfolio/portfolio.png":[function(require,module,exports) {
+},{"../../../img/portfolio/modern.png":"src/img/portfolio/modern.png","../../../img/about-ellipse.png":"src/img/about-ellipse.png","./modern.css":"src/components/portfolio/modern/modern.css"}],"src/img/portfolio/transitional.png":[function(require,module,exports) {
+module.exports = "/transitional.4c5378bb.png";
+},{}],"src/components/portfolio/transitional/transitional.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/portfolio/transitional/transitional.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getTransitional = getTransitional;
+var _transitional = _interopRequireDefault(require("../../../img/portfolio/transitional.png"));
+var _aboutEllipse = _interopRequireDefault(require("../../../img/about-ellipse.png"));
+require("./transitional.css");
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+function getTransitional() {
+  var transitionalBlock = document.createElement("div");
+  transitionalBlock.className = "transitional-block";
+  transitionalBlock.innerHTML = "\n        <div class=\"transitional-box\">\n            <div class=\"transitional_box\">\n                <h2 class=\"transitional-title\">Transitional Room</h2>\n                <p class=\"transitional-text\">\n                    Online learning with us does not interfere with your daily life, \n                    because learning can be done anytime and anywhere.\n                </p>\n                <button class=\"transitional-btn\">See More</button>\n            </div>\n            <img class=\"transitional-img\" src=\"".concat(_transitional.default, "\">\n        </div>\n        <div class=\"block transitional\">\n            <img class=\"block-img\" src=\"").concat(_aboutEllipse.default, "\" alt=\"\">\n            <div class=\"blocks\">\n                <h3 class=\"blocks-title\">Arga Danaan</h3>\n                <p class=\"blocks-text\">CEO of Dananz</p>\n            </div>\n        </div>\n    ");
+  return transitionalBlock;
+}
+},{"../../../img/portfolio/transitional.png":"src/img/portfolio/transitional.png","../../../img/about-ellipse.png":"src/img/about-ellipse.png","./transitional.css":"src/components/portfolio/transitional/transitional.css"}],"src/img/portfolio/portfolio.png":[function(require,module,exports) {
 module.exports = "/portfolio.dc3522f7.png";
 },{}],"src/components/portfolio/portfolio.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
@@ -1011,6 +1034,7 @@ exports.getPortfolio = getPortfolio;
 var _minimalist = require("./minimalist/minimalist");
 var _vintage = require("./vintage/vintage");
 var _modern = require("./modern/modern");
+var _transitional = require("./transitional/transitional");
 var _portfolio = _interopRequireDefault(require("../../img/portfolio/portfolio.png"));
 require("./portfolio.css");
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
@@ -1023,10 +1047,10 @@ function getPortfolio() {
   portfolioBlock.className = "portfolio-block";
   portfolioBlock.innerHTML = "\n        <h1 class=\"portfolio-title\">Portofolio</h1>\n        <p class=\"portfolio-text\">\n            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\n        </p>\n        <img class=\"portfolio-img\" src=\"".concat(_portfolio.default, "\">\n    ");
   section.append(container);
-  container.append(portfolioBlock, (0, _minimalist.getMinimalist)(), (0, _vintage.getVintage)(), (0, _modern.getModern)());
+  container.append(portfolioBlock, (0, _minimalist.getMinimalist)(), (0, _vintage.getVintage)(), (0, _modern.getModern)(), (0, _transitional.getTransitional)());
   return section;
 }
-},{"./minimalist/minimalist":"src/components/portfolio/minimalist/minimalist.js","./vintage/vintage":"src/components/portfolio/vintage/vintage.js","./modern/modern":"src/components/portfolio/modern/modern.js","../../img/portfolio/portfolio.png":"src/img/portfolio/portfolio.png","./portfolio.css":"src/components/portfolio/portfolio.css"}],"src/page/pagePortfolio/pagePortfolio.css":[function(require,module,exports) {
+},{"./minimalist/minimalist":"src/components/portfolio/minimalist/minimalist.js","./vintage/vintage":"src/components/portfolio/vintage/vintage.js","./modern/modern":"src/components/portfolio/modern/modern.js","./transitional/transitional":"src/components/portfolio/transitional/transitional.js","../../img/portfolio/portfolio.png":"src/img/portfolio/portfolio.png","./portfolio.css":"src/components/portfolio/portfolio.css"}],"src/page/pagePortfolio/pagePortfolio.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
@@ -1038,14 +1062,15 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.getPagePortfolio = getPagePortfolio;
 var _portfolio = require("../../components/portfolio/portfolio");
+var _aboutService = require("../../components/about/aboutService/aboutService");
 require("./pagePortfolio.css");
 function getPagePortfolio() {
   var portfolioMain = document.createElement("main");
   portfolioMain.className = "portfolio-main";
-  portfolioMain.append((0, _portfolio.getPortfolio)());
+  portfolioMain.append((0, _portfolio.getPortfolio)(), (0, _aboutService.getAboutService)());
   return portfolioMain;
 }
-},{"../../components/portfolio/portfolio":"src/components/portfolio/portfolio.js","./pagePortfolio.css":"src/page/pagePortfolio/pagePortfolio.css"}],"src/img/footer-img/footer-ellipse.svg":[function(require,module,exports) {
+},{"../../components/portfolio/portfolio":"src/components/portfolio/portfolio.js","../../components/about/aboutService/aboutService":"src/components/about/aboutService/aboutService.js","./pagePortfolio.css":"src/page/pagePortfolio/pagePortfolio.css"}],"src/img/footer-img/footer-ellipse.svg":[function(require,module,exports) {
 module.exports = "/footer-ellipse.36ff19b7.svg";
 },{}],"src/img/footer-img/footer-vector.svg":[function(require,module,exports) {
 module.exports = "/footer-vector.eafc8784.svg";
@@ -1199,7 +1224,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34713" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38927" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
