@@ -246,7 +246,7 @@ exports.getRating = getRating;
 require("./rating.css");
 function getRating() {
   var rating = document.createElement("div");
-  rating.classList.add("rating-1", "rating-2");
+  rating.className = "rating-1";
   rating.innerHTML = "\n        <div class=\"rating-block\">\n            <span class=\"rating-span\">350+</span>\n            <p class=\"rating-text texts\">Project Completed</p>\n            <span class=\"rating-span\">23+</span>\n            <p class=\"rating-text texts\">Professional Teams</p>\n            <span class=\"rating-span\">15+</span>\n            <p class=\"rating-text\">Years Experience</p>\n        </div>\n    ";
   return rating;
 }
@@ -273,7 +273,7 @@ function getHomeMain() {
   var container = document.createElement("div");
   container.className = "container";
   var designBlock = document.createElement("div");
-  designBlock.className = "design-block";
+  designBlock.className = "design_block";
   designBlock.innerHTML = "\n        <div class=\"desing-box\">\n            <h1 class=\"design-title\">Design your interor with high quality.</h1>\n            <div class=\"desing_box\">\n                <span class=\"desing_box-span\">2022</span>\n                <p class=\"desing_box-text\">ALL RIGHT RESERVED</p>\n            </div>\n        </div>\n        <img class=\"desing-img\" src=\"".concat(_mainBg.default, "\" alt=\"\">\n    ");
   section.append(container);
   container.append(designBlock, (0, _rating.getRating)());
@@ -465,10 +465,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.getAboutAchievement = getAboutAchievement;
-var _rating = require("../../rating/rating");
 var _achievement = _interopRequireDefault(require("../../../img/achievement.png"));
 require("./aboutAchievement.css");
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+// import { getRating } from "../../rating/rating";
+
 function getAboutAchievement() {
   var section = document.createElement("section");
   section.className = "section-achievement";
@@ -476,12 +477,12 @@ function getAboutAchievement() {
   container.className = "container";
   var aboutAchievementBlock = document.createElement("div");
   aboutAchievementBlock.className = "achievement-block";
-  aboutAchievementBlock.innerHTML = "\n        <p class=\"achievement-text\">ACHIEVEMENT</p>\n        <h2 class=\"achievement-title\">Interior customization with Danaanz, best quality with professional workers</h2>\n        <img class=\"achievement-img\" src=\"".concat(_achievement.default, "\">\n    ");
+  aboutAchievementBlock.innerHTML = "\n        <p class=\"achievement-text\">ACHIEVEMENT</p>\n        <h2 class=\"achievement-title\">Interior customization with Danaanz, best quality with professional workers</h2>\n        <img class=\"achievement-img\" src=\"".concat(_achievement.default, "\">\n        <div class=\"rating-block rating-2\">\n            <span class=\"rating-span\">350+</span>\n            <p class=\"rating-text texts\">Project Completed</p>\n            <span class=\"rating-span\">23+</span>\n            <p class=\"rating-text texts\">Professional Teams</p>\n            <span class=\"rating-span\">15+</span>\n            <p class=\"rating-text\">Years Experience</p>\n        </div>\n    ");
   section.append(container);
-  container.append(aboutAchievementBlock, (0, _rating.getRating)());
+  container.append(aboutAchievementBlock);
   return section;
 }
-},{"../../rating/rating":"src/components/rating/rating.js","../../../img/achievement.png":"src/img/achievement.png","./aboutAchievement.css":"src/components/about/aboutAchievement/aboutAchievement.css"}],"src/img/choose-ellipse.png":[function(require,module,exports) {
+},{"../../../img/achievement.png":"src/img/achievement.png","./aboutAchievement.css":"src/components/about/aboutAchievement/aboutAchievement.css"}],"src/img/choose-ellipse.png":[function(require,module,exports) {
 module.exports = "/choose-ellipse.1027eea2.png";
 },{}],"src/components/choose/quality.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
@@ -1255,14 +1256,7 @@ var _pagePortfolio = require("./src/page/pagePortfolio/pagePortfolio.js");
 var _pagePortofolios = require("./src/page/pagePortofolios/pagePortofolios.js");
 var _pageFooter = require("./src/page/pageFooter/pageFooter.js");
 var app = document.querySelector("#app");
-app.append((0, _pageHeader.getPageHeader)(),
-// getPageMain(),
-// getPageAboutMain(),
-// getPageServicesMain(),
-// getPageTeamsMain(),
-// getPageContact(),
-// getPagePortfolio(),
-(0, _pagePortofolios.getPagePortofolios)(), (0, _pageFooter.getPageFooter)());
+app.append((0, _pageHeader.getPageHeader)(), (0, _pageMain.getPageMain)(), (0, _pageAbout.getPageAboutMain)(), (0, _pageServices.getPageServicesMain)(), (0, _pageTeams.getPageTeamsMain)(), (0, _pageContact.getPageContact)(), (0, _pagePortfolio.getPagePortfolio)(), (0, _pagePortofolios.getPagePortofolios)(), (0, _pageFooter.getPageFooter)());
 },{"./src/page/pageHeader/pageHeader.js":"src/page/pageHeader/pageHeader.js","./src/page/pageMain/pageMain.js":"src/page/pageMain/pageMain.js","./src/page/pageAbout/pageAbout.js":"src/page/pageAbout/pageAbout.js","./src/page/pageServices/pageServices.js":"src/page/pageServices/pageServices.js","./src/page/pageTeams/pageTeams.js":"src/page/pageTeams/pageTeams.js","./src/page/pageContact/pageContact.js":"src/page/pageContact/pageContact.js","./src/page/pagePortfolio/pagePortfolio.js":"src/page/pagePortfolio/pagePortfolio.js","./src/page/pagePortofolios/pagePortofolios.js":"src/page/pagePortofolios/pagePortofolios.js","./src/page/pageFooter/pageFooter.js":"src/page/pageFooter/pageFooter.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -1288,7 +1282,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38977" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "40445" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

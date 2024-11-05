@@ -95,7 +95,7 @@
     content: '';
     position: absolute;
     top: 310px;
-    right: 220px;
+    right: 360px;
 } 
 .section-about
 {
@@ -516,7 +516,7 @@
     content: '';
     position: absolute;
     top: 183px;
-    right: 75px;
+    right: -10px;
 } 
 .quality-block
 {
