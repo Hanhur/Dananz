@@ -1121,6 +1121,52 @@
     top: 30px;
     left: 120px;
 }
+.modern-block
+{
+    position: relative;
+    margin-bottom: 40px;
+}
+.modern-box
+{
+    display: flex;
+    gap: 0 95px;
+}
+.modern_box
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.modern-title
+{
+    font-size: 24px;
+    font-weight: 600;
+    width: 171px;
+    color: var(--GrayscaleBlack50);
+    margin-bottom: 20px;
+}
+.modern-text
+{
+    width: 223px;
+    color: var(--GrayscaleBlack10);
+    margin-bottom: 40px;
+}
+.modern-btn
+{
+    font-size: 14px;
+    font-weight: 500;
+    padding: 14px 32px;
+    width: 130px;
+    color: var(--GrayscaleWhite);
+    background-color: var(--PrimaryBlue100);
+}
+.modern 
+{
+    content: '';
+    position: absolute;
+    top: 30px;
+    right: 120px;
+}
 .section-portfolio
 {
     margin-bottom: 132px;
