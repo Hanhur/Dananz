@@ -926,7 +926,54 @@ function getPageContact() {
   contactMain.append((0, _contact.getContact)(), (0, _location.getLocation)());
   return contactMain;
 }
-},{"../../components/contact/contact":"src/components/contact/contact.js","../../components/location/location":"src/components/location/location.js","./pageContact.css":"src/page/pageContact/pageContact.css"}],"src/img/footer-img/footer-ellipse.svg":[function(require,module,exports) {
+},{"../../components/contact/contact":"src/components/contact/contact.js","../../components/location/location":"src/components/location/location.js","./pageContact.css":"src/page/pageContact/pageContact.css"}],"src/img/portfolio/portfolio.png":[function(require,module,exports) {
+module.exports = "/portfolio.dc3522f7.png";
+},{}],"src/components/portfolio/portfolio.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components/portfolio/portfolio.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getPortfolio = getPortfolio;
+var _portfolio = _interopRequireDefault(require("../../img/portfolio/portfolio.png"));
+require("./portfolio.css");
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+function getPortfolio() {
+  var section = document.createElement("section");
+  section.className = "section-portfolio";
+  var container = document.createElement("div");
+  container.className = "container";
+  var portfolioBlock = document.createElement("div");
+  portfolioBlock.className = "portfolio-block";
+  portfolioBlock.innerHTML = "\n        <h1 class=\"portfolio-title\">Portofolio</h1>\n        <p class=\"portfolio-text\">\n            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\n        </p>\n        <img class=\"portfolio-img\" src=\"".concat(_portfolio.default, "\">\n    ");
+  section.append(container);
+  container.append(portfolioBlock);
+  return section;
+}
+},{"../../img/portfolio/portfolio.png":"src/img/portfolio/portfolio.png","./portfolio.css":"src/components/portfolio/portfolio.css"}],"src/page/pagePortfolio/pagePortfolio.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/page/pagePortfolio/pagePortfolio.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getPagePortfolio = getPagePortfolio;
+var _portfolio = require("../../components/portfolio/portfolio");
+require("./pagePortfolio.css");
+function getPagePortfolio() {
+  var portfolioMain = document.createElement("main");
+  portfolioMain.className = "portfolio-main";
+  portfolioMain.append((0, _portfolio.getPortfolio)());
+  return portfolioMain;
+}
+},{"../../components/portfolio/portfolio":"src/components/portfolio/portfolio.js","./pagePortfolio.css":"src/page/pagePortfolio/pagePortfolio.css"}],"src/img/footer-img/footer-ellipse.svg":[function(require,module,exports) {
 module.exports = "/footer-ellipse.36ff19b7.svg";
 },{}],"src/img/footer-img/footer-vector.svg":[function(require,module,exports) {
 module.exports = "/footer-vector.eafc8784.svg";
@@ -1045,6 +1092,7 @@ var _pageAbout = require("./src/page/pageAbout/pageAbout.js");
 var _pageServices = require("./src/page/pageServices/pageServices.js");
 var _pageTeams = require("./src/page/pageTeams/pageTeams.js");
 var _pageContact = require("./src/page/pageContact/pageContact.js");
+var _pagePortfolio = require("./src/page/pagePortfolio/pagePortfolio.js");
 var _pageFooter = require("./src/page/pageFooter/pageFooter.js");
 var app = document.querySelector("#app");
 app.append((0, _pageHeader.getPageHeader)(),
@@ -1052,8 +1100,9 @@ app.append((0, _pageHeader.getPageHeader)(),
 // getPageAboutMain(),
 // getPageServicesMain(),
 // getPageTeamsMain(),
-(0, _pageContact.getPageContact)(), (0, _pageFooter.getPageFooter)());
-},{"./src/page/pageHeader/pageHeader.js":"src/page/pageHeader/pageHeader.js","./src/page/pageMain/pageMain.js":"src/page/pageMain/pageMain.js","./src/page/pageAbout/pageAbout.js":"src/page/pageAbout/pageAbout.js","./src/page/pageServices/pageServices.js":"src/page/pageServices/pageServices.js","./src/page/pageTeams/pageTeams.js":"src/page/pageTeams/pageTeams.js","./src/page/pageContact/pageContact.js":"src/page/pageContact/pageContact.js","./src/page/pageFooter/pageFooter.js":"src/page/pageFooter/pageFooter.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+// getPageContact(),
+(0, _pagePortfolio.getPagePortfolio)(), (0, _pageFooter.getPageFooter)());
+},{"./src/page/pageHeader/pageHeader.js":"src/page/pageHeader/pageHeader.js","./src/page/pageMain/pageMain.js":"src/page/pageMain/pageMain.js","./src/page/pageAbout/pageAbout.js":"src/page/pageAbout/pageAbout.js","./src/page/pageServices/pageServices.js":"src/page/pageServices/pageServices.js","./src/page/pageTeams/pageTeams.js":"src/page/pageTeams/pageTeams.js","./src/page/pageContact/pageContact.js":"src/page/pageContact/pageContact.js","./src/page/pagePortfolio/pagePortfolio.js":"src/page/pagePortfolio/pagePortfolio.js","./src/page/pageFooter/pageFooter.js":"src/page/pageFooter/pageFooter.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -1078,7 +1127,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42027" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45943" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
