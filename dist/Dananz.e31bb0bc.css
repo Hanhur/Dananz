@@ -1013,6 +1013,7 @@
 .minimalist-block
 {
     position: relative;
+    margin-bottom: 40px;
 }
 .portfolio_text
 {
@@ -1073,6 +1074,52 @@
     position: absolute;
     top: 95px;
     right: 120px;
+}
+.vintage-block
+{
+    position: relative;
+    margin-bottom: 40px;
+}
+.vintage-box
+{
+    display: flex;
+    gap: 0 95px;
+}
+.vintage_box
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.vintage-title
+{
+    font-size: 24px;
+    font-weight: 600;
+    width: 175px;
+    color: var(--GrayscaleBlack50);
+    margin-bottom: 20px;
+}
+.vintage-text
+{
+    width: 223px;
+    color: var(--GrayscaleBlack10);
+    margin-bottom: 40px;
+}
+.vintage-btn
+{
+    font-size: 14px;
+    font-weight: 500;
+    padding: 14px 32px;
+    width: 130px;
+    color: var(--GrayscaleWhite);
+    background-color: var(--PrimaryBlue100);
+}
+.vintage 
+{
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 120px;
 }
 .section-portfolio
 {

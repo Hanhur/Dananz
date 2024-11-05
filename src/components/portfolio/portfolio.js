@@ -1,4 +1,5 @@
 import { getMinimalist } from "./minimalist/minimalist";
+import { getVintage } from "./vintage/vintage";
 import portfolioPng from "../../img/portfolio/portfolio.png";
 import "./portfolio.css";
 
@@ -24,6 +25,7 @@ export function getPortfolio()
     container.append(
         portfolioBlock,
         getMinimalist(),
+        getVintage(),
     );
 
     return section;
