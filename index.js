@@ -6,6 +6,7 @@ import { getPageAboutMain } from "./src/page/pageAbout/pageAbout.js";
 import { getPageServicesMain } from "./src/page/pageServices/pageServices.js";
 import { getPageTeamsMain } from "./src/page/pageTeams/pageTeams.js";
 import { getPageContact } from "./src/page/pageContact/pageContact.js";
+import { getPagePortfolio } from "./src/page/pagePortfolio/pagePortfolio.js";
 import { getPageFooter } from "./src/page/pageFooter/pageFooter.js";
 
 
@@ -15,6 +16,7 @@ app.append(
     // getPageAboutMain(),
     // getPageServicesMain(),
     // getPageTeamsMain(),
-    getPageContact(),
+    // getPageContact(),
+    getPagePortfolio(),
     getPageFooter()
 );

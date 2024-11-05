@@ -1,0 +1,19 @@
+.section-portfolio
+{
+    margin-bottom: 112px;
+}
+.portfolio-title
+{
+    font-size: 56px;
+    font-weight: 700;
+    width: 278px;
+    color: var(--GrayscaleBlack);
+    margin: 0 auto 36px;
+}
+.portfolio-text
+{
+    width: 518px;
+    color: var(--GrayscaleBlack);
+    text-align: center;
+    margin: 0 auto 57px;
+}
